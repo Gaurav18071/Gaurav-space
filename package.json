@@ -1,0 +1,40 @@
+{
+  "name": "gaurav-space",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@iconify/react": "^5.2.0",
+    "@react-three/drei": "^9.117.3",
+    "@react-three/fiber": "^8.17.14",
+    "@react-three/postprocessing": "^2.16.3",
+    "@vercel/functions": "^1.5.0",
+    "formik": "^2.4.6",
+    "framer-motion": "^11.18.2",
+    "lenis": "^1.2.3",
+    "maath": "^0.10.8",
+    "next": "^16.4.6",
+    "nodemailer": "^6.9.16",
+    "postprocessing": "^6.36.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.171.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/nodemailer": "^6.4.17",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.171.0",
+    "eslint": "^10.15.0",
+    "eslint-config-next": "^15.1.6",
+    "sass": "^1.83.4",
+    "typescript": "^5.7.3"
+  }
+}
