@@ -43,8 +43,8 @@ function notchPath(angle: number) {
 function Bars({ letter }: { letter: typeof letterL }) {
   return (
     <>
-      {letter.map(([x, y, width, height]) => (
-        <rect key={`${x}-${y}`} x={x} y={y} width={width} height={height} rx={barRadius} />
+      {letter.map(([x, y, width, height], i) => (
+        <rect key={`${i}-${x}-${y}`} x={x} y={y} width={width} height={height} rx={barRadius} />
       ))}
     </>
   );

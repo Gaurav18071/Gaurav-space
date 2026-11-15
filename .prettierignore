@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+
+# Next.js build output
+.next
+out
+
+# Generated files
+package-lock.json
+public
+
+# Type declarations (auto-generated)
+next-env.d.ts
+
+# Misc
+.env*
+*.lock
