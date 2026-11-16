@@ -41,6 +41,7 @@ import {
   WarmupGate,
   WarmupProvider,
   createWarmupTracker,
+  patchCompileAsync,
   useWarmupIdle,
 } from './warmup';
 import { tourStops, useWorldMode } from './worldMode';
@@ -247,6 +248,7 @@ export default function WorldCanvas({
       events={worldEvents}
       eventSource={document.body}
       onCreated={({ gl }) => {
+        patchCompileAsync(gl);
         // Reading every shader's info log on first use is a synchronous round
         // trip to the GPU process per shader; keep it for development only
         gl.debug.checkShaderErrors = process.env.NODE_ENV !== 'production';

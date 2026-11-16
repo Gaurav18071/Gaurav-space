@@ -32,6 +32,50 @@ import type { GroupProps } from './types';
 let scratchTarget: WebGLRenderTarget | null = null;
 
 /**
+ * Monkey-patches renderer.compileAsync so that materials without a compiled program
+ * (such as custom postprocessing passes or materials not managed by standard WebGLRenderer)
+ * do not cause `Cannot read properties of undefined (reading 'isReady')`.
+ */
+export function patchCompileAsync(gl: WebGLRenderer) {
+  if (!gl || (gl as unknown as { __compileAsyncPatched?: boolean }).__compileAsyncPatched) return;
+  (gl as unknown as { __compileAsyncPatched?: boolean }).__compileAsyncPatched = true;
+
+  const originalCompile = gl.compile.bind(gl);
+
+  gl.compileAsync = function (scene: Object3D, camera: Camera, targetScene: Scene | null = null) {
+    const materials = originalCompile(scene as Scene, camera, targetScene);
+
+    return new Promise((resolve) => {
+      function checkMaterialsReady() {
+        materials.forEach((material: Material) => {
+          const materialProperties = (
+            gl as unknown as {
+              properties: {
+                get: (m: Material) => { currentProgram?: { isReady?: () => boolean } };
+              };
+            }
+          ).properties?.get(material);
+          const program = materialProperties?.currentProgram;
+
+          if (!program || (typeof program.isReady === 'function' ? program.isReady() : true)) {
+            materials.delete(material);
+          }
+        });
+
+        if (materials.size === 0) {
+          resolve(scene);
+          return;
+        }
+
+        setTimeout(checkMaterialsReady, 10);
+      }
+
+      checkMaterialsReady();
+    });
+  };
+}
+
+/**
  * Shader variants depend on where they draw: the scene is always drawn into
  * the post-processing input buffer (linear colour, no tone mapping), so it
  * has to be compiled with a render target bound to hit the same programs.
@@ -92,6 +136,7 @@ export async function precompile(
   camera: Camera,
   scene: Scene
 ) {
+  patchCompileAsync(gl);
   await withTarget(gl, true, () => gl.compileAsync(object, camera, scene));
   await primePrograms(gl, materialsOf(object));
 }
@@ -151,6 +196,7 @@ export function precompileComposer(
   camera: Camera,
   scene: Scene
 ) {
+  patchCompileAsync(gl);
   const { onscreen, offscreen, overrides } = composerMaterials(composer);
   // Compile against the passes' own fullscreen triangle: its attributes (no
   // normals) are part of the shader variant, so a plane would miss

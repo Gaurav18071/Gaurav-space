@@ -40,7 +40,7 @@ function notchPath(angle: number) {
   return `M ${a.x.toFixed(2)} ${a.y.toFixed(2)} A ${ring.rx} ${ring.ry} 0 0 1 ${b.x.toFixed(2)} ${b.y.toFixed(2)}`;
 }
 
-function Bars({ letter }: { letter: typeof letterL }) {
+function Bars({ letter }: { letter: typeof letterG }) {
   return (
     <>
       {letter.map(([x, y, width, height], i) => (

@@ -1,9 +1,9 @@
 {
   "global": {
     "openToWork": true,
-    "openToWorkText": "Open to Work Â· India & Remote",
+    "openToWorkText": "Open to Work · India & Remote",
     "location": "Delhi, India",
-    "contentUpdated": "2026-10-20",
+    "contentUpdated": "2026-11-16",
     "navItems": [
       {
         "href": "/",
@@ -47,10 +47,10 @@
     "titles": [
       "Software Development Engineer Intern",
       "Full Stack Developer",
-      "Spring Boot & Next.js Engineer",
-      "DSA Problem Solver"
+      "Java & Spring Boot Developer",
+      "Next.js Developer"
     ],
-    "tagline": "Final-year CS Engineering student based in Delhi, India. Building and deploying full-stack applications end-to-end with Spring Boot & Next.js backends, JWT authentication, and LLM-based features. Three projects shipped on GitHub and two live on Vercel.",
+    "tagline": "Final-year Computer Science Engineering student based in Delhi, India. Building end-to-end applications with Java, Spring Boot, React, Next.js and PostgreSQL, with a focus on backend engineering, secure APIs and practical AI integration.",
     "cta": {
       "primary": {
         "text": "Explore my work",
@@ -69,22 +69,22 @@
       {
         "value": 3,
         "suffix": "+",
-        "label": "Live Projects"
+        "label": "Full-Stack Projects"
       },
       {
         "value": 80,
         "suffix": "+",
-        "label": "DSA Problems"
+        "label": "DSA Problems Solved"
       },
       {
         "value": 15,
         "suffix": "+",
-        "label": "PR Merges"
+        "label": "PRs Merged"
       },
       {
-        "value": 8,
-        "suffix": "+",
-        "label": "UI Components"
+        "value": 3,
+        "suffix": "",
+        "label": "Internship Experiences"
       }
     ],
     "exploreLabel": "Mission control",
@@ -93,25 +93,25 @@
       {
         "href": "/about",
         "title": "About",
-        "text": "Final-year CS student building full-stack applications with Java, Spring Boot, React and Next.js.",
+        "text": "Final-year Computer Science Engineering student focused on building full-stack applications with Java, Spring Boot, React and Next.js.",
         "icon": "ph:user-focus-bold"
       },
       {
         "href": "/experience",
         "title": "Experience",
-        "text": "The mission log: Data & AI Intern at Ministry of Panchayati Raj, Frontend Intern at Atldo Tech, and Web Developer at Brainwave Matrix.",
+        "text": "Professional experience across Data & AI, frontend development and web development internships.",
         "icon": "ph:rocket-launch-bold"
       },
       {
         "href": "/projects",
         "title": "Projects",
-        "text": "Three live full-stack builds: AI typing tutor, golf fundraising platform and a recruitment management system.",
+        "text": "Explore Flapboard, Golf Cart and HireTrack — projects covering AI-assisted learning, fundraising workflows and recruitment management.",
         "icon": "ph:cube-focus-bold"
       },
       {
         "href": "/skills",
         "title": "Skills",
-        "text": "The toolkit: Java, Spring Boot, Next.js, TypeScript, PostgreSQL, Docker, and LLM APIs.",
+        "text": "Java, Spring Boot, Next.js, React, TypeScript, PostgreSQL, Prisma, Docker and LLM API integration.",
         "icon": "ph:atom-bold"
       }
     ]
@@ -120,8 +120,8 @@
     "title": "About",
     "label": "Get to know me",
     "openToWorkText": "Available for opportunities",
-    "descriptionHeader": "",
-    "description": "<p><strong>Hi, I'm Gaurav Mishra</strong>, a <em>full stack developer</em> based in <strong>New Delhi, India</strong>, currently in my final year of Computer Science Engineering.</p><p>I build and ship end-to-end applications using <strong>React, Next.js, and TypeScript</strong> on the frontend and <strong>Spring Boot, Node.js, and PostgreSQL</strong> on the backend. I've worked with <em>LLM APIs (ChatGPT, Claude, Gemini)</em> to integrate AI features, containerised services with Docker, and secured apps with JWT authentication.</p><p>Currently a <strong>Data &amp; AI Intern</strong> at the <em>Ministry of Panchayati Raj, Government of India</em>. I'm actively looking for <strong>SDE internships and full-time roles</strong> in India or remote — let's build something great together.</p>",
+    "descriptionHeader": "A little about me",
+    "description": "<p><strong>Hi, I'm Gaurav Mishra</strong>, a <em>full-stack developer</em> based in <strong>Delhi, India</strong>, currently in my final year of Computer Science Engineering at Dronacharya Group of Institutions.</p><p>I build end-to-end web applications using <strong>Java, Spring Boot, React, Next.js and TypeScript</strong>. My work includes REST API development, authentication, relational database design, frontend development and deployment. I have also integrated LLM APIs to add AI-assisted features to application workflows.</p><p>I'm currently working as a <strong>Data &amp; AI Intern</strong> at the <em>Ministry of Panchayati Raj, Government of India</em>. I'm open to <strong>SDE internships and full-time software development opportunities</strong> in India and remote roles.</p>",
     "image": {
       "url": "/static/images/bio-pic.jpeg",
       "size": {
@@ -149,25 +149,80 @@
     "highlights": [
       {
         "icon": "mdi:react",
-        "title": "React & Next.js",
-        "sub": "3 full-stack apps shipped — typing tutor, fundraising platform & ATS"
+        "title": "Full-Stack Development",
+        "sub": "Building applications with React, Next.js, TypeScript, Java and Spring Boot"
       },
       {
         "icon": "mdi:robot",
-        "title": "LLM Integration",
-        "sub": "ChatGPT, Claude & Gemini APIs powering real AI features in production"
+        "title": "AI Integration",
+        "sub": "Integrating LLM APIs from OpenAI, Anthropic and Google into application workflows"
       },
       {
         "icon": "mdi:code-braces",
-        "title": "DSA & Problem Solving",
-        "sub": "80+ problems solved on LeetCode & NeetCode with strong fundamentals"
+        "title": "Problem Solving",
+        "sub": "80+ problems solved across LeetCode and NeetCode"
       },
       {
         "icon": "mdi:server",
-        "title": "Backend & Cloud",
-        "sub": "Spring Boot REST APIs, JWT auth, Docker, PostgreSQL & Vercel deployments"
+        "title": "Backend & Databases",
+        "sub": "REST APIs, JWT authentication, PostgreSQL, Prisma and Docker"
       }
     ],
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "institution": "Dronacharya Group of Institutions",
+          "degree": "Bachelor of Technology",
+          "field": "Computer Science and Engineering",
+          "location": "Greater Noida, India",
+          "graduation": "2027",
+          "status": "Final Year"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "items": [
+        {
+          "name": "Responsive Web Design",
+          "issuer": "freeCodeCamp"
+        },
+        {
+          "name": "Foundations of Generative AI",
+          "issuer": "IBM"
+        },
+        {
+          "name": "Full-Stack Developer Training",
+          "issuer": "Digital Heroes"
+        },
+        {
+          "name": "Claude 101",
+          "issuer": "Anthropic"
+        },
+        {
+          "name": "AI Fluency: Framework & Foundations",
+          "issuer": "Anthropic"
+        }
+      ]
+    },
+    "achievements": {
+      "title": "Achievements & Leadership",
+      "items": [
+        {
+          "title": "Smart India Hackathon 2024",
+          "description": "Led a student team participating in the Smart India Hackathon."
+        },
+        {
+          "title": "Problem Solving",
+          "description": "Solved 80+ coding problems across LeetCode and NeetCode."
+        },
+        {
+          "title": "Class Representative",
+          "description": "Served as a communication link between students and faculty."
+        }
+      ]
+    },
     "recommendations": []
   },
   "experience": {
@@ -181,28 +236,60 @@
         "company": "Ministry of Panchayati Raj, Government of India",
         "title": "Data & AI Intern",
         "years": "Sep 2026 - Present",
-        "description": "Working alongside senior engineers to build a website chatbot and a dedicated portal for panchayats across India. Organizing and managing panchayat-level datasets in a systematic, structured way using ChatGPT, Claude, and Gemini to support the work.",
-        "mainTech": ["ChatGPT", "Claude", "Gemini", "LLM APIs", "Python"],
+        "description": "Contributing to work on a website chatbot and a dedicated portal for panchayats across India. Supporting the organization and management of panchayat-level datasets in a structured format and using AI tools including ChatGPT, Claude and Gemini to assist research and data workflows.",
+        "mainTech": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "LLM APIs",
+          "Python"
+        ],
         "icon": "mdi:robot",
-        "technologies": ["Data Management", "AI Integration", "Government Portal", "Dataset Organization"]
+        "technologies": [
+          "Data Management",
+          "AI-Assisted Workflows",
+          "Government Portal",
+          "Dataset Organization"
+        ]
       },
       {
         "company": "Atldo Tech",
         "title": "Frontend Developer Intern",
         "years": "Jul 2026 - Aug 2026",
-        "description": "Shipped 6+ production React components, converting designs into responsive, cross-browser-tested interfaces. Merged 15+ PRs across 4 sprint cycles in a Git-based team code-review workflow.",
-        "mainTech": ["React", "JavaScript", "CSS", "Git"],
+        "description": "Developed and shipped 6+ React components, translating design requirements into responsive, cross-browser-tested interfaces. Merged 15+ pull requests across four sprint cycles while collaborating through Git-based code reviews.",
+        "mainTech": [
+          "React",
+          "JavaScript",
+          "CSS",
+          "Git"
+        ],
         "icon": "devicon:react",
-        "technologies": ["HTML5", "Responsive Design", "Cross-browser Testing", "Sprint Workflow", "Code Review"]
+        "technologies": [
+          "HTML5",
+          "Responsive Design",
+          "Cross-Browser Testing",
+          "Sprint Workflow",
+          "Code Review"
+        ]
       },
       {
         "company": "Brainwave Matrix Solutions",
         "title": "Web Developer Intern",
         "years": "Sep 2024 - Nov 2024",
-        "description": "Built 8+ pages and 5+ reusable UI components from raw requirements. Debugged layouts across Chrome, Firefox, and Safari, ensuring cross-browser consistency and quality.",
-        "mainTech": ["HTML5", "CSS3", "JavaScript", "React"],
+        "description": "Built 8+ web pages and 5+ reusable UI components from project requirements. Debugged layouts across Chrome, Firefox and Safari to improve cross-browser consistency.",
+        "mainTech": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "React"
+        ],
         "icon": "devicon:javascript",
-        "technologies": ["UI Components", "Cross-browser Debugging", "Chrome DevTools", "Firefox", "Safari Testing"]
+        "technologies": [
+          "UI Components",
+          "Cross-Browser Debugging",
+          "Chrome DevTools",
+          "Responsive Interfaces"
+        ]
       }
     ]
   },
@@ -211,17 +298,16 @@
     "label": "What I've built",
     "items": [
       {
-        "title": "Flapboard â€” AI-Powered Adaptive Typing Platform",
+        "title": "Flapboard — AI-Powered Adaptive Typing Platform",
         "slug": "flapboard",
         "startDate": "2026",
-        "description": "Flapboard is an AI-powered adaptive typing platform that tracks real-time WPM and accuracy, provides a performance dashboard, and generates targeted drills from past weaknesses. Built a Spring Boot REST API with JWT authentication and PostgreSQL for user accounts, typing sessions, and progress history; containerized the backend with Docker. Developed a typing test with real-time WPM and accuracy tracking, a performance dashboard, and an adaptive module that generates targeted drills from past weaknesses. Integrated a live LLM API that structures performance metrics into personalized coaching, keeping calculations in deterministic code and using the LLM only for explanations.",
+        "description": "Developed a full-stack typing platform featuring real-time WPM and accuracy tracking, performance analytics and adaptive typing drills. Built REST APIs using Java and Spring Boot, implemented JWT authentication, and designed PostgreSQL-backed user accounts, typing sessions and progress history. Integrated an LLM API to turn performance metrics into personalized coaching and targeted practice recommendations, while keeping scoring and calculations in deterministic application logic.",
         "theme": {
           "text": "light",
           "border": "light",
           "background": "dark"
         },
         "thumbnail": "mdi:keyboard",
-        "images": [],
         "url": "https://typing-master-pied.vercel.app",
         "technologies": [
           {
@@ -256,20 +342,23 @@
             "class": "logos:jwt-icon",
             "name": "JWT"
           }
-        ]
+        ],
+        "links": {
+          "live": "https://typing-master-pied.vercel.app",
+          "github": ""
+        }
       },
       {
-        "title": "Golf Cart â€” Full-Stack Fundraising Platform",
+        "title": "Golf Cart — Full-Stack Fundraising Platform",
         "slug": "golf-cart",
         "startDate": "2026",
-        "description": "Golf Cart is a role-based full-stack fundraising platform built with Next.js, TypeScript, Supabase, PostgreSQL (Neon), Prisma, Razorpay, and Zod. Implemented organization registration with document upload and an admin verification workflow, plus campaign management and donation tracking. Designed a relational schema (Profile, Organization, Campaign, Donation, Payment) in Prisma/PostgreSQL; integrated Razorpay for donation payments with transaction tracking. Added AI-assisted campaign writing and search with Zod-validated structured outputs grounded in database records.",
+        "description": "Built a role-based fundraising platform using Next.js, TypeScript, Prisma and PostgreSQL. Implemented organization registration with document uploads and an admin verification workflow, alongside campaign management and donation tracking. Designed relational data models for profiles, organizations, campaigns, donations and payments. Integrated Razorpay for donation payments and transaction tracking, with Zod-validated AI-assisted campaign writing and search grounded in application data.",
         "theme": {
           "text": "light",
           "border": "light",
           "background": "dark"
         },
         "thumbnail": "mdi:golf",
-        "images": [],
         "url": "https://golf-platform-on-vercel.app",
         "technologies": [
           {
@@ -300,20 +389,23 @@
             "class": "devicon:zod",
             "name": "Zod"
           }
-        ]
+        ],
+        "links": {
+          "live": "https://golf-platform-on-vercel.app",
+          "github": ""
+        }
       },
       {
-        "title": "HireTrack â€” Recruitment Management Platform (ATS)",
+        "title": "HireTrack — Recruitment Management Platform (ATS)",
         "slug": "hiretrack",
         "startDate": "2026",
-        "description": "HireTrack is an Applicant Tracking System built with Next.js, TypeScript, Prisma, PostgreSQL (Neon), Auth.js, bcrypt, and shadcn/ui. Built credentials-based authentication with bcrypt password hashing and protected dashboard routes, with recruiter-scoped job creation and listing. Designed a relational schema (User, Job, Candidate, Application) with a unique candidateâ€“job constraint to prevent duplicate applications, and per-application hiring stages (Applied â†’ Screening â†’ Interview â†’ Offer â†’ Hired/Rejected).",
+        "description": "Developed an applicant tracking system using Next.js, TypeScript, Prisma and PostgreSQL. Implemented credentials-based authentication with bcrypt password hashing and protected dashboard routes, alongside recruiter-scoped job creation and listing. Designed relational models for users, jobs, candidates and applications, including a unique candidate-job constraint to prevent duplicate applications and a hiring pipeline covering Applied, Screening, Interview, Offer, Hired and Rejected stages.",
         "theme": {
           "text": "light",
           "border": "light",
           "background": "dark"
         },
         "thumbnail": "mdi:briefcase-account",
-        "images": [],
         "url": "https://github.com/Gaurav18071/Hiretrack-ai",
         "technologies": [
           {
@@ -340,7 +432,11 @@
             "class": "simple-icons:shadcnui",
             "name": "shadcn/ui"
           }
-        ]
+        ],
+        "links": {
+          "live": "",
+          "github": "https://github.com/Gaurav18071/Hiretrack-ai"
+        }
       }
     ],
     "ctaText": "View Details"
@@ -348,10 +444,11 @@
   "skills": {
     "title": "Skills",
     "label": "My toolkit",
-    "tagline": "Full-stack development with Java & JavaScript ecosystems, LLM integration, and cloud-native deployments.",
+    "tagline": "Full-stack development across Java and JavaScript ecosystems, relational databases, API development and practical AI integration.",
     "marquee": [
       "Java",
       "Spring Boot",
+      "Spring Security",
       "Next.js",
       "React",
       "TypeScript",
@@ -361,221 +458,187 @@
       "Supabase",
       "Docker",
       "JWT Authentication",
-      "REST API",
+      "REST APIs",
       "Python",
       "LLM APIs",
-      "ChatGPT",
-      "Claude",
-      "Gemini",
       "Git",
       "GitHub",
       "Tailwind CSS",
-      "DSA",
-      "NeetCode",
-      "LeetCode"
+      "Maven",
+      "Postman"
     ],
     "categories": [
+      {
+        "title": "Programming Languages",
+        "icon": "mdi:code-braces",
+        "categoryKey": "languages"
+      },
       {
         "title": "Frontend",
         "icon": "mdi:monitor",
         "categoryKey": "frontend"
       },
       {
-        "title": "Backend & Cloud",
+        "title": "Backend & Databases",
         "icon": "mdi:cloud-outline",
         "categoryKey": "backend"
       },
       {
-        "title": "Testing",
-        "icon": "mdi:flask-outline",
-        "categoryKey": "testing"
+        "title": "AI Integration",
+        "icon": "mdi:robot",
+        "categoryKey": "ai"
       },
       {
-        "title": "Tooling & DevOps",
+        "title": "Tools & DevOps",
         "icon": "mdi:wrench-outline",
         "categoryKey": "tooling"
+      },
+      {
+        "title": "Testing & Validation",
+        "icon": "mdi:flask-outline",
+        "categoryKey": "testing"
       }
     ],
     "icons": [
       {
+        "name": "Java",
+        "class": "devicon:java",
+        "category": "languages"
+      },
+      {
+        "name": "JavaScript",
+        "class": "devicon:javascript",
+        "category": "languages"
+      },
+      {
+        "name": "TypeScript",
+        "class": "devicon:typescript",
+        "category": "languages"
+      },
+      {
+        "name": "Python",
+        "class": "devicon:python",
+        "category": "languages"
+      },
+      {
         "name": "React",
         "class": "devicon:react",
-        "level": "90",
         "category": "frontend"
       },
       {
         "name": "Next.js",
         "class": "devicon:nextjs",
-        "level": "85",
-        "category": "frontend"
-      },
-      {
-        "name": "TypeScript",
-        "class": "devicon:typescript",
-        "level": "85",
-        "category": "frontend"
-      },
-      {
-        "name": "JavaScript (ES6+)",
-        "class": "devicon:javascript",
-        "level": "90",
         "category": "frontend"
       },
       {
         "name": "HTML5",
         "class": "devicon:html5",
-        "level": "95",
         "category": "frontend"
       },
       {
         "name": "CSS3",
         "class": "devicon:css3",
-        "level": "90",
         "category": "frontend"
       },
       {
         "name": "Tailwind CSS",
         "class": "devicon:tailwindcss",
-        "level": "85",
         "category": "frontend"
       },
       {
         "name": "shadcn/ui",
         "class": "simple-icons:shadcnui",
-        "level": "80",
         "category": "frontend"
-      },
-      {
-        "name": "Java",
-        "class": "devicon:java",
-        "level": "90",
-        "category": "backend"
       },
       {
         "name": "Spring Boot",
         "class": "devicon:spring",
-        "level": "85",
         "category": "backend"
       },
       {
         "name": "Spring Security",
         "class": "devicon:spring",
-        "level": "80",
         "category": "backend"
       },
       {
-        "name": "Python",
-        "class": "devicon:python",
-        "level": "75",
-        "category": "backend"
-      },
-      {
-        "name": "REST API",
+        "name": "REST APIs",
         "class": "material-symbols:api",
-        "level": "90",
         "category": "backend"
       },
       {
         "name": "JWT Authentication",
         "class": "logos:jwt-icon",
-        "level": "85",
         "category": "backend"
       },
       {
         "name": "PostgreSQL",
         "class": "devicon:postgresql",
-        "level": "85",
         "category": "backend"
       },
       {
         "name": "Prisma ORM",
         "class": "devicon:prisma",
-        "level": "80",
         "category": "backend"
       },
       {
         "name": "Supabase",
         "class": "logos:supabase-icon",
-        "level": "80",
         "category": "backend"
       },
       {
-        "name": "Docker",
-        "class": "devicon:docker",
-        "level": "80",
-        "category": "backend"
-      },
-      {
-        "name": "Next.js Server Actions",
-        "class": "devicon:nextjs",
-        "level": "80",
-        "category": "backend"
-      },
-      {
-        "name": "LeetCode DSA",
-        "class": "simple-icons:leetcode",
-        "level": "80",
-        "category": "testing"
-      },
-      {
-        "name": "Cross-Browser Testing",
-        "class": "mdi:web",
-        "level": "85",
-        "category": "testing"
-      },
-      {
-        "name": "Zod Validation",
-        "class": "devicon:zod",
-        "level": "75",
-        "category": "testing"
-      },
-      {
-        "name": "ChatGPT",
+        "name": "OpenAI API",
         "class": "simple-icons:openai",
-        "level": "90",
-        "category": "tooling"
+        "category": "ai"
       },
       {
-        "name": "Claude",
+        "name": "Claude API",
         "class": "logos:claude-icon",
-        "level": "90",
-        "category": "tooling"
+        "category": "ai"
       },
       {
-        "name": "Gemini",
+        "name": "Gemini API",
         "class": "logos:google-gemini",
-        "level": "85",
-        "category": "tooling"
+        "category": "ai"
       },
       {
         "name": "Git",
         "class": "devicon:git",
-        "level": "90",
         "category": "tooling"
       },
       {
         "name": "GitHub",
         "class": "devicon:github",
-        "level": "90",
+        "category": "tooling"
+      },
+      {
+        "name": "Docker",
+        "class": "devicon:docker",
         "category": "tooling"
       },
       {
         "name": "Postman",
         "class": "devicon:postman",
-        "level": "85",
         "category": "tooling"
       },
       {
         "name": "Maven",
         "class": "devicon:maven",
-        "level": "80",
         "category": "tooling"
       },
       {
         "name": "Vercel",
         "class": "devicon:vercel",
-        "level": "85",
         "category": "tooling"
+      },
+      {
+        "name": "Zod",
+        "class": "devicon:zod",
+        "category": "testing"
+      },
+      {
+        "name": "Cross-Browser Testing",
+        "class": "mdi:web",
+        "category": "testing"
       }
     ]
   },
@@ -585,7 +648,7 @@
     "tagline": "Let's work together on your next project",
     "contactInfo": {
       "title": "Get in touch.",
-      "description": "The fastest way is email. I reply within a working day.",
+      "description": "The fastest way to reach me is by email.",
       "items": [
         {
           "name": "Email",
@@ -602,7 +665,7 @@
         {
           "name": "LinkedIn",
           "class": "mdi:linkedin",
-          "value": "in/gaurav-mishra-5579a330",
+          "value": "LinkedIn Profile",
           "link": "https://www.linkedin.com/in/gaurav-mishra-5579a330"
         },
         {
@@ -632,7 +695,7 @@
     },
     "rateLimited": {
       "headerText": "Slow down, space traveller",
-      "bodyText": "Youâ€™ve sent a few messages in a short time. Please try again in a few minutes, or email me directly."
+      "bodyText": "You've sent a few messages in a short time. Please try again in a few minutes, or email me directly."
     },
     "success": {
       "status": "success",
@@ -648,7 +711,7 @@
   "footer": {
     "name": "Gaurav Mishra",
     "tagline": "Software Development Engineer crafting modern full-stack experiences.",
-    "description": "Final-year CS student building full-stack apps with Spring Boot, Next.js, and LLM APIs. Open to SDE roles.",
+    "description": "Final-year Computer Science Engineering student building full-stack applications with Java, Spring Boot, Next.js and AI integrations. Open to SDE opportunities.",
     "social": [
       {
         "name": "GitHub",
@@ -669,7 +732,7 @@
     "navigateText": "Navigate",
     "elsewhereText": "Elsewhere",
     "connectText": "Connect",
-    "version": "v3.0 Â· 2026",
+    "version": "v3.1 · 2026",
     "madeInPrefix": "Made in",
     "copyright": "Designed & built with care.",
     "builtWith": {
@@ -679,7 +742,7 @@
     },
     "cta": {
       "pretext": "Have a project in mind?",
-      "text": "Letâ€™s build",
+      "text": "Let's build",
       "accent": "something",
       "url": "/contact"
     }
@@ -690,32 +753,32 @@
       {
         "station": "home",
         "title": "Gateway hub",
-        "text": "Gaurav Mishra: full-stack SDE intern in Delhi, India, shipping Spring Boot & Next.js applications with LLM integration."
+        "text": "Meet Gaurav Mishra, a full-stack developer building Java, Spring Boot and Next.js applications."
       },
       {
         "station": "about",
         "title": "Crew habitat",
-        "text": "The person behind the code. Final-year CS student, Data & AI Intern at Ministry of Panchayati Raj, and 80+ DSA problems solved."
+        "text": "Explore Gaurav's education, certifications, achievements and development interests."
       },
       {
         "station": "experience",
         "title": "Tether array",
-        "text": "Three internships logged: Government of India, Atldo Tech, and Brainwave Matrix. Click a pod on the experience page to jump to that role."
+        "text": "Explore experience across Data & AI, frontend development and web development internships."
       },
       {
         "station": "projects",
         "title": "Fabrication yard",
-        "text": "Three full-stack builds orbit the hub: AI typing tutor, fundraising platform, and an ATS recruitment system."
+        "text": "Explore three full-stack projects: Flapboard, Golf Cart and HireTrack."
       },
       {
         "station": "skills",
         "title": "Research outpost",
-        "text": "Java, Spring Boot, Next.js, TypeScript, PostgreSQL, Docker, LLM APIs and more in orbit."
+        "text": "Browse programming languages, frontend, backend, AI integration and development tools."
       },
       {
         "station": "contact",
         "title": "Comms array",
-        "text": "Open to SDE roles in India and remote. The dish is listening."
+        "text": "Get in touch about software development opportunities and collaborations."
       }
     ]
   }
