@@ -87,7 +87,7 @@ export function ProjectPage({
     };
   }, [number]);
 
-  const slides = useSlides(project.images.length);
+  const slides = useSlides(project.images?.length ?? 0);
   const name = project.title.trim();
   const { lead, accent } = splitTitle(name);
 

@@ -39,6 +39,17 @@ const state = {
 const listeners = new Set<() => void>();
 const notify = () => listeners.forEach((listener) => listener());
 
+// Automatic safety failsafe: if 3D assets/warmup don't finish within 3.5s,
+// lift the boot screen and allow the page content to show immediately.
+if (typeof window !== 'undefined') {
+  window.setTimeout(() => {
+    if (!state.done) {
+      readyBoot();
+      finishBoot();
+    }
+  }, 3500);
+}
+
 export const bootState = () => state;
 
 export function onBoot(listener: () => void) {

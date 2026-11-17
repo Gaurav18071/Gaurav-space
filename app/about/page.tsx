@@ -8,9 +8,9 @@ import { ResumeData } from '@/types';
 
 import type { Metadata } from 'next';
 
-const title = 'About: Freelance Full Stack Developer';
+const title = 'About: Full Stack Developer & SDE';
 const description =
-  'Senior full stack engineer based in Peterborough, UK. Nine years shipping React, Next.js & Azure at IBM, ADP, ERGO.';
+  'Full Stack Developer & SDE based in Delhi, India. Building modern web applications with Java, Spring Boot, Next.js, and React.';
 
 export const metadata: Metadata = pageMetadata({ path: '/about', title, description });
 

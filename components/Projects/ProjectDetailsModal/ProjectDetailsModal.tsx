@@ -63,7 +63,7 @@ export function ProjectDetailsModal({
 }) {
   const { title, images, url, startDate, thumbnail } = project;
   const name = title.trim();
-  const slides = useSlides(images.length);
+  const slides = useSlides(images?.length ?? 0);
   const dialogRef = useFocusTrap<HTMLDivElement>(true);
   const lenis = useLenis();
   const titleId = useId();

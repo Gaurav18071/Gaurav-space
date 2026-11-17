@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
     title: 'About',
     accent: 'me',
     description:
-      'Senior full stack engineer based in Peterborough, UK. Nine years shipping React, Next.js & Azure.',
+      'Full Stack Developer & SDE based in Delhi, India. Building scalable web apps with Java, Spring Boot, Next.js & React.',
     render: 'helmet',
   });
 }

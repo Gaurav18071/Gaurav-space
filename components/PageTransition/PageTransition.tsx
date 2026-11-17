@@ -63,8 +63,16 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const next = station.current;
     if (!flight.current) {
-      // A full page load enters as the loading screen lifts
-      return whenBooted(() => controls.start('visible'));
+      // A full page load enters as the loading screen lifts, with an 800ms fallback
+      const timer = window.setTimeout(() => controls.start('visible'), 800);
+      const cancel = whenBooted(() => {
+        window.clearTimeout(timer);
+        controls.start('visible');
+      });
+      return () => {
+        window.clearTimeout(timer);
+        cancel();
+      };
     }
     let shown = false;
     const show = () => {

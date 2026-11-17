@@ -8,9 +8,9 @@ import { ResumeData } from '@/types';
 
 import type { Metadata } from 'next';
 
-const title = 'Contact: Hire a Freelance React Developer';
+const title = 'Contact: Full Stack Developer & SDE';
 const description =
-  'Get in touch. Available for senior or lead full stack roles, UK & EU remote, freelance or permanent.';
+  'Get in touch with Gaurav Mishra. Open to full stack development and SDE opportunities, Delhi & remote globally.';
 
 export const metadata: Metadata = pageMetadata({ path: '/contact', title, description });
 

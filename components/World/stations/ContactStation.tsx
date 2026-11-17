@@ -55,17 +55,14 @@ const arrayLights: NavLight[] = [
 ];
 
 const radius = 2.25;
-const home = { lat: 52.57, lng: -0.24 };
-// UK & EU remote — arcs from Peterborough to a handful of European hubs
+const home = { lat: 28.61, lng: 77.21 }; // Delhi, India
+// Arcs from Delhi to global tech hubs
 const cities = [
-  { lat: 52.37, lng: 4.9 },
-  { lat: 52.52, lng: 13.4 },
-  { lat: 38.72, lng: -9.14 },
-  { lat: 41.39, lng: 2.17 },
-  { lat: 59.33, lng: 18.07 },
-  { lat: 53.35, lng: -6.26 },
-  { lat: 48.86, lng: 2.35 },
-  { lat: 48.14, lng: 11.58 },
+  { lat: 12.97, lng: 77.59 }, // Bengaluru
+  { lat: 19.07, lng: 72.87 }, // Mumbai
+  { lat: 1.35, lng: 103.82 }, // Singapore
+  { lat: 51.5, lng: -0.12 }, // London
+  { lat: 37.77, lng: -122.42 }, // San Francisco
 ];
 
 const dotVertex = /* glsl */ `
@@ -273,7 +270,7 @@ function buildArcs() {
   });
 }
 
-const globeTip = { label: 'Peterborough, UK', sub: 'Drag to spin the globe' };
+const globeTip = { label: 'Delhi, India', sub: 'Drag to spin the globe' };
 const rocketTip = { label: 'Ready for launch', sub: 'Send a message to fire it, or click to rev' };
 /** Seconds the rocket's rev (a hop and a burst of exhaust) takes */
 const revTime = 1;
@@ -531,8 +528,8 @@ export function ContactStation({ theme }: { theme: WorldTheme }) {
         spin.pitch = MathUtils.damp(spin.pitch, 0, 1.2, dt);
       }
       globe.rotation.y =
-        -Math.PI / 2 + Math.sin(t * 0.12) * 0.35 + worldStore.pointerX * 0.2 + spin.yaw;
-      globe.rotation.x = 0.62 + worldStore.pointerY * 0.08 + spin.pitch;
+        -2.53 + Math.sin(t * 0.12) * 0.35 + worldStore.pointerX * 0.2 + spin.yaw;
+      globe.rotation.x = 0.32 + worldStore.pointerY * 0.08 + spin.pitch;
     }
 
     // Transmitting: packets stream along an arc over the globe to the pin
@@ -575,7 +572,7 @@ export function ContactStation({ theme }: { theme: WorldTheme }) {
   return (
     <StationScope station="contact">
       <group ref={groupRef} position={stationPositions.contact}>
-        <group ref={globeRef} position={[0, 0.5, 0]} rotation={[0.62, -Math.PI / 2, 0]}>
+        <group ref={globeRef} position={[0, 0.5, 0]} rotation={[0.32, -2.53, 0]}>
           <mesh
             onPointerDown={(e) => startSpin(spinRef.current, e)}
             onPointerOver={(e) => {

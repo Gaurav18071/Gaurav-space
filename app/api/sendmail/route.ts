@@ -5,7 +5,7 @@ import { cleanDisplayName, contactLimits, validateContactPayload } from 'utils/c
 import { clientIp, createRateLimiter } from 'utils/rateLimit';
 
 const senderEmail = 'portfolio@gauravmishra.dev';
-const receiverEmail = 'gaurav.ram27@gmail.com';
+const receiverEmail = 'gauravmishra.dev.27@gmail.com';
 const emailSubject = 'New Portfolio Message';
 
 // 5 messages per visitor per 10 minutes is generous for people and dull for bots

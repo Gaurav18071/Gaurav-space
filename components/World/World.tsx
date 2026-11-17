@@ -166,7 +166,7 @@ export function World({ content }: { content: WorldContent }) {
   useEffect(() => {
     const away = active && mode !== 'page';
     document.documentElement.dataset.worldMode = away ? mode : 'page';
-    for (const el of document.querySelectorAll('#main-content, .header, .footer')) {
+    for (const el of document.querySelectorAll('#main-content, .footer')) {
       el.toggleAttribute('inert', away || !booted);
     }
   }, [active, mode, booted]);

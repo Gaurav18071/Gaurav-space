@@ -58,7 +58,7 @@ const worldContent: WorldContent = {
     slug: p.slug,
     icon: p.thumbnail,
     // Full-page captures first: they make the best "live" screens
-    images: [...p.images]
+    images: [...(p.images ?? [])]
       // Typed as the declared image shape: the type inferred from the JSON doesn't always
       // carry the optional `fullPage`
       .map((image: Project['images'][number]) => ({
@@ -84,7 +84,7 @@ const paletteData: PaletteData = {
   email,
   cv: { url: content.about.cta.primary.url, name: content.about.cv.download },
   links: content.footer.social.map(({ name, url }) => ({ name, url })),
-  whoami: `${personName}: senior full stack engineer, ${content.global.location}. Nine years shipping React, Next.js and cloud platforms. Open to senior and lead roles.`,
+  whoami: `${personName}: Full Stack Developer & SDE Intern, ${content.global.location}. Building modern applications with React, Next.js, Java, Spring Boot, and AI integrations.`,
 };
 
 const profileImage = content.about?.image?.url || '/static/images/bio-pic.jpeg';
@@ -197,9 +197,9 @@ function JsonLd() {
     sameAs,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Peterborough',
-      addressRegion: 'Cambridgeshire',
-      addressCountry: 'GB',
+      addressLocality: 'Delhi',
+      addressRegion: 'Delhi',
+      addressCountry: 'IN',
     },
   };
 
@@ -236,6 +236,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en-GB"
       data-theme="dark"
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${unbounded.variable} ${geist.variable} ${geistMono.variable}`}
     >

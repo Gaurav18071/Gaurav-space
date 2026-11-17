@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
     title: 'Let’s',
     accent: 'connect',
     description:
-      'Available for senior or lead full stack work: UK & EU remote, freelance or permanent.',
+      'Available for full stack and SDE roles: Delhi, India & remote globally.',
     render: 'rocket',
   });
 }

@@ -121,7 +121,7 @@ export function MobileMenu({
         </div>
         <p className="mobile-menu__foot">
           <span className="mobile-menu__dot" aria-hidden="true" />
-          Peterborough, UK · UK &amp; EU remote
+          Delhi, India · Remote &amp; Worldwide
         </p>
       </div>
     </div>

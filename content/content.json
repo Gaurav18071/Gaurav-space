@@ -298,6 +298,125 @@
     "label": "What I've built",
     "items": [
       {
+        "title": "Golf Cart — Full-Stack Fundraising Platform",
+        "slug": "golf-cart",
+        "startDate": "2026",
+        "description": "Built a role-based fundraising platform using Next.js, TypeScript, Prisma and PostgreSQL. Implemented organization registration with document uploads and an admin verification workflow, alongside campaign management and donation tracking. Designed relational data models for profiles, organizations, campaigns, donations and payments. Integrated Razorpay for donation payments and transaction tracking, with Zod-validated AI-assisted campaign writing and search grounded in application data.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:golf",
+        "url": "https://golf-platform-gn.vercel.app/",
+        "technologies": [
+          {
+            "class": "devicon:nextjs",
+            "name": "Next.js"
+          },
+          {
+            "class": "devicon:typescript",
+            "name": "TypeScript"
+          },
+          {
+            "class": "logos:supabase-icon",
+            "name": "Supabase"
+          },
+          {
+            "class": "devicon:postgresql",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon:prisma",
+            "name": "Prisma"
+          },
+          {
+            "class": "simple-icons:razorpay",
+            "name": "Razorpay"
+          },
+          {
+            "class": "devicon:zod",
+            "name": "Zod"
+          }
+        ],
+        "links": {
+          "live": "https://golf-platform-gn.vercel.app/",
+          "github": ""
+        },
+        "status": "Live",
+        "images": []
+      },
+      {
+        "title": "NeuroQuiz — Interactive Quiz & Learning Platform",
+        "slug": "neuroquiz",
+        "startDate": "2026",
+        "description": "Built an interactive quiz platform with a responsive interface, animated interactions, scoring and feedback, review mode, achievement tracking and a dashboard. Developed using Vanilla JavaScript and Vite, with GSAP animations and browser local storage for an engaging learning workflow.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:brain",
+        "url": "https://neuroquiz-g.vercel.app",
+        "technologies": [
+          {
+            "class": "devicon:html5",
+            "name": "HTML5"
+          },
+          {
+            "class": "devicon:css3",
+            "name": "CSS3"
+          },
+          {
+            "class": "devicon:javascript",
+            "name": "JavaScript"
+          },
+          {
+            "class": "devicon:vite",
+            "name": "Vite"
+          },
+          {
+            "class": "devicon:greensock",
+            "name": "GSAP"
+          },
+          {
+            "class": "devicon:vercel",
+            "name": "Vercel"
+          }
+        ],
+        "links": {
+          "live": "https://neuroquiz-g.vercel.app",
+          "github": "https://github.com/Gaurav18071/NeuroQuiz"
+        },
+        "status": "Live",
+        "images": []
+      },
+      {
+        "title": "Gaurav Mishra — Developer Portfolio",
+        "slug": "gaurav-portfolio",
+        "startDate": "2026",
+        "description": "Designed and developed a personal developer portfolio to present professional experience, projects, technical skills and contact information through a distinctive space-themed interface. Includes dedicated sections for About, Experience, Projects, Skills and Contact, responsive navigation and a guided portfolio experience.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:rocket-launch",
+        "url": "https://gaurav-portfolio-ea7.pages.dev",
+        "technologies": [
+          {
+            "class": "devicon:nextjs",
+            "name": "Next.js"
+          }
+        ],
+        "links": {
+          "live": "https://gaurav-portfolio-ea7.pages.dev",
+          "github": ""
+        },
+        "status": "Live",
+        "images": []
+      },
+      {
         "title": "Flapboard — AI-Powered Adaptive Typing Platform",
         "slug": "flapboard",
         "startDate": "2026",
@@ -346,54 +465,9 @@
         "links": {
           "live": "https://typing-master-pied.vercel.app",
           "github": ""
-        }
-      },
-      {
-        "title": "Golf Cart — Full-Stack Fundraising Platform",
-        "slug": "golf-cart",
-        "startDate": "2026",
-        "description": "Built a role-based fundraising platform using Next.js, TypeScript, Prisma and PostgreSQL. Implemented organization registration with document uploads and an admin verification workflow, alongside campaign management and donation tracking. Designed relational data models for profiles, organizations, campaigns, donations and payments. Integrated Razorpay for donation payments and transaction tracking, with Zod-validated AI-assisted campaign writing and search grounded in application data.",
-        "theme": {
-          "text": "light",
-          "border": "light",
-          "background": "dark"
         },
-        "thumbnail": "mdi:golf",
-        "url": "https://golf-platform-on-vercel.app",
-        "technologies": [
-          {
-            "class": "devicon:nextjs",
-            "name": "Next.js"
-          },
-          {
-            "class": "devicon:typescript",
-            "name": "TypeScript"
-          },
-          {
-            "class": "logos:supabase-icon",
-            "name": "Supabase"
-          },
-          {
-            "class": "devicon:postgresql",
-            "name": "PostgreSQL"
-          },
-          {
-            "class": "devicon:prisma",
-            "name": "Prisma"
-          },
-          {
-            "class": "simple-icons:razorpay",
-            "name": "Razorpay"
-          },
-          {
-            "class": "devicon:zod",
-            "name": "Zod"
-          }
-        ],
-        "links": {
-          "live": "https://golf-platform-on-vercel.app",
-          "github": ""
-        }
+        "status": "Live",
+        "images": []
       },
       {
         "title": "HireTrack — Recruitment Management Platform (ATS)",
@@ -436,7 +510,9 @@
         "links": {
           "live": "",
           "github": "https://github.com/Gaurav18071/Hiretrack-ai"
-        }
+        },
+        "status": "Source Code",
+        "images": []
       }
     ],
     "ctaText": "View Details"
@@ -653,8 +729,8 @@
         {
           "name": "Email",
           "class": "clarity:email-solid",
-          "value": "gaurav.ram27@gmail.com",
-          "link": "mailto:gaurav.ram27@gmail.com"
+          "value": "gauravmishra.dev.27@gmail.com",
+          "link": "mailto:gauravmishra.dev.27@gmail.com"
         },
         {
           "name": "Phone",

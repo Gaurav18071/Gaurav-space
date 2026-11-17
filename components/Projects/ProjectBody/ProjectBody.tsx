@@ -410,7 +410,7 @@ export function ProjectBody({
   slides: Slides;
   headingLevel?: 2 | 3;
 }) {
-  const { title, description, images, technologies, url, startDate, thumbnail } = project;
+  const { title, description, images = [], technologies, url, startDate, thumbnail } = project;
   const name = title.trim();
   const count = images.length;
   const Heading = headingLevel === 2 ? 'h2' : 'h3';

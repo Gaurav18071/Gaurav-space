@@ -165,7 +165,7 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
           </address>
 
           <Reveal delay={0.2}>
-            <LocationMap location="Peterborough, UK" />
+            <LocationMap location="Delhi, India" />
           </Reveal>
         </aside>
 
@@ -197,7 +197,7 @@ export const Contact = ({ contact }: { contact: ContactProps }) => {
                 <p className="contact__success-eyebrow">Transmission received</p>
                 {receivedAt && (
                   <p className="contact__success-log">
-                    Logged {receivedAt} UK time · relayed by the comms array to Peterborough
+                    Logged {receivedAt} IST · relayed by the comms array to Delhi
                   </p>
                 )}
                 <h2 className="contact__success-title">{success.headerText}</h2>

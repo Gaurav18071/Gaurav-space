@@ -233,15 +233,15 @@ export function CommandPalette({ data }: { data: PaletteData }) {
           return true;
         case 'date':
           print(
-            new Date().toLocaleString('en-GB', {
-              timeZone: 'Europe/London',
+            new Date().toLocaleString('en-IN', {
+              timeZone: 'Asia/Kolkata',
               dateStyle: 'full',
               timeStyle: 'short',
-            }) + ' (Peterborough)'
+            }) + ' (Delhi, India)'
           );
           return true;
         case 'ping':
-          print('PING peterborough.uk (52.57°N, 0.24°W): 64 bytes, time=0.000042 ly', 'ok');
+          print('PING delhi.in (28.61°N, 77.21°E): 64 bytes, time=0.000042 ly', 'ok');
           return true;
         case 'rm':
           print('Nice try.', 'warn');
