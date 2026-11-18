@@ -21,7 +21,6 @@
       "contexts/*": ["./contexts/*"],
       "utils/*": ["./utils/*"],
       "config": ["./config/config.ts"],
-      "icons": ["./icons"],
       "scss/*": ["./scss/*"]
     },
     "plugins": [
