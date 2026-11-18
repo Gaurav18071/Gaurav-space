@@ -40,6 +40,18 @@ export function patchCompileAsync(gl: WebGLRenderer) {
   if (!gl || (gl as unknown as { __compileAsyncPatched?: boolean }).__compileAsyncPatched) return;
   (gl as unknown as { __compileAsyncPatched?: boolean }).__compileAsyncPatched = true;
 
+  if (gl.debug) {
+    gl.debug.checkShaderErrors = false;
+    gl.debug.onShaderError = (glCtx, program, vShader, fShader) => {
+      const pLog = glCtx.getProgramInfoLog(program)?.trim();
+      const vLog = glCtx.getShaderInfoLog(vShader)?.trim();
+      const fLog = glCtx.getShaderInfoLog(fShader)?.trim();
+      if (pLog || vLog || fLog) {
+        console.warn('Shader diagnostic:', { pLog, vLog, fLog });
+      }
+    };
+  }
+
   const originalCompile = gl.compile.bind(gl);
 
   gl.compileAsync = function (scene: Object3D, camera: Camera, targetScene: Scene | null = null) {

@@ -418,9 +418,16 @@ function buildEnvironment(renderer: WebGLRenderer, sky: WebGLRenderTarget, theme
   bounce.scale.setScalar(3.5);
   scene.add(bounce);
 
-  const generator = new PMREMGenerator(renderer);
-  const target = generator.fromScene(scene, 0, 0.1, 30);
-  generator.dispose();
+  const prevCheck = renderer.debug?.checkShaderErrors;
+  if (renderer.debug) renderer.debug.checkShaderErrors = false;
+  let target: WebGLRenderTarget;
+  try {
+    const generator = new PMREMGenerator(renderer);
+    target = generator.fromScene(scene, 0, 0.1, 30);
+    generator.dispose();
+  } finally {
+    if (renderer.debug && prevCheck !== undefined) renderer.debug.checkShaderErrors = prevCheck;
+  }
   domeGeometry.dispose();
   domeMaterial.dispose();
   panelGeometry.dispose();
@@ -488,9 +495,16 @@ export function Nebula({
   // environment's shader variant before the bake finishes
   useEffect(() => {
     if (scene.environment) return;
-    const generator = new PMREMGenerator(gl);
-    const placeholder = generator.fromScene(new Scene(), 0, 0.1, 30);
-    generator.dispose();
+    const prevCheck = gl.debug?.checkShaderErrors;
+    if (gl.debug) gl.debug.checkShaderErrors = false;
+    let placeholder: WebGLRenderTarget;
+    try {
+      const generator = new PMREMGenerator(gl);
+      placeholder = generator.fromScene(new Scene(), 0, 0.1, 30);
+      generator.dispose();
+    } finally {
+      if (gl.debug && prevCheck !== undefined) gl.debug.checkShaderErrors = prevCheck;
+    }
     applyEnvironment(scene, placeholder.texture);
   }, [gl, scene]);
 

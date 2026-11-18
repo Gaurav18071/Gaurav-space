@@ -125,8 +125,8 @@
     "image": {
       "url": "/static/images/bio-pic.jpeg",
       "size": {
-        "width": 2252,
-        "height": 2526
+        "width": 565,
+        "height": 752
       }
     },
     "cv": {
@@ -335,7 +335,7 @@
             "name": "Razorpay"
           },
           {
-            "class": "devicon:zod",
+            "class": "simple-icons:zod",
             "name": "Zod"
           }
         ],
@@ -376,7 +376,7 @@
             "name": "Vite"
           },
           {
-            "class": "devicon:greensock",
+            "class": "simple-icons:greensock",
             "name": "GSAP"
           },
           {
@@ -499,7 +499,7 @@
             "name": "PostgreSQL"
           },
           {
-            "class": "simple-icons:authjs",
+            "class": "mdi:shield-key-outline",
             "name": "Auth.js"
           },
           {
@@ -708,7 +708,7 @@
       },
       {
         "name": "Zod",
-        "class": "devicon:zod",
+        "class": "simple-icons:zod",
         "category": "testing"
       },
       {

@@ -3,14 +3,15 @@
 import { useEffect, useState } from 'react';
 
 const formatTime = () =>
-  new Intl.DateTimeFormat('en-GB', {
+  new Intl.DateTimeFormat('en-IN', {
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    timeZone: 'Europe/London',
+    hour12: false,
+    timeZone: 'Asia/Kolkata',
   }).format(new Date());
 
-/** Sci-fi readout along the bottom of the hero: home base, UK local time, scroll cue */
+/** Sci-fi readout along the bottom of the hero: home base, IST local time, scroll cue */
 export function HeroHud({ location }: { location: string }) {
   const [time, setTime] = useState<string | null>(null);
 

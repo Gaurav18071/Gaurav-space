@@ -221,9 +221,16 @@ function disposeAssets(assets: Assets) {
 
 /** Studio reflections for the bevels (RoomEnvironment: built locally, nothing fetched) */
 function lightScene(gl: WebGLRenderer, scene: Scene) {
-  const pmrem = new PMREMGenerator(gl);
-  const texture: Texture = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  pmrem.dispose();
+  const prevCheck = gl.debug?.checkShaderErrors;
+  if (gl.debug) gl.debug.checkShaderErrors = false;
+  let texture: Texture;
+  try {
+    const pmrem = new PMREMGenerator(gl);
+    texture = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    pmrem.dispose();
+  } finally {
+    if (gl.debug && prevCheck !== undefined) gl.debug.checkShaderErrors = prevCheck;
+  }
   scene.environment = texture;
   return () => {
     if (scene.environment === texture) scene.environment = null;

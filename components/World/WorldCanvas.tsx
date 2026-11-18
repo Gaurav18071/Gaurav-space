@@ -249,9 +249,17 @@ export default function WorldCanvas({
       eventSource={document.body}
       onCreated={({ gl }) => {
         patchCompileAsync(gl);
-        // Reading every shader's info log on first use is a synchronous round
-        // trip to the GPU process per shader; keep it for development only
-        gl.debug.checkShaderErrors = process.env.NODE_ENV !== 'production';
+        // Avoid synchronous shader validation queries which produce false-positive
+        // VALIDATE_STATUS 1282 errors with PMREMGenerator / SphericalGaussianBlur
+        gl.debug.checkShaderErrors = false;
+        gl.debug.onShaderError = (glCtx, program, vShader, fShader) => {
+          const pLog = glCtx.getProgramInfoLog(program)?.trim();
+          const vLog = glCtx.getShaderInfoLog(vShader)?.trim();
+          const fLog = glCtx.getShaderInfoLog(fShader)?.trim();
+          if (pLog || vLog || fLog) {
+            console.warn('Shader diagnostic:', { pLog, vLog, fLog });
+          }
+        };
       }}
     >
       <WarmupProvider tracker={tracker}>

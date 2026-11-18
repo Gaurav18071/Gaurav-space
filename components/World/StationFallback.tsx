@@ -4,7 +4,15 @@ import Image from 'next/image';
  * 2D render of a station's model, displayed only when the WebGL world is off
  * (no WebGL / Save-Data — see World.tsx). Hidden images are never fetched.
  */
-export function StationFallback({ src, className = '' }: { src: string; className?: string }) {
+export function StationFallback({
+  src,
+  className = '',
+  priority = true,
+}: {
+  src: string;
+  className?: string;
+  priority?: boolean;
+}) {
   return (
     <Image
       src={src}
@@ -13,6 +21,7 @@ export function StationFallback({ src, className = '' }: { src: string; classNam
       width={800}
       height={800}
       sizes="(min-width: 900px) 420px, 60vw"
+      priority={priority}
       className={`station-fallback ${className}`}
     />
   );
