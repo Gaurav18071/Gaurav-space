@@ -18,6 +18,7 @@ import { RoamButton } from '@/components/RoamButton/RoamButton';
 import { BootScreen } from '@/components/BootScreen/BootScreen';
 import { ScrollProgress } from '@/components/ScrollProgress/ScrollProgress';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 import type { Metadata, Viewport } from 'next';
 
@@ -269,6 +270,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd />
         <GoogleAnalyticsDeferred gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''} />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
