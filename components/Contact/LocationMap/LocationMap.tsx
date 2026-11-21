@@ -79,7 +79,7 @@ export function LocationMap({ location }: { location: string }) {
           <Icon icon="ph:broadcast-bold" width={18} height={18} />
         </span>
         <span>
-          Transmitting from <b>{location}</b>. Remote across India &amp; global.
+          Transmitting from <b>{location}</b>. Open to Delhi NCR &amp; remote roles.
         </span>
       </figcaption>
     </figure>

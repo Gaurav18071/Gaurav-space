@@ -288,7 +288,7 @@ export async function renderOgImage({
           </div>
         ) : (
           <div style={{ display: 'flex', fontSize: 26, color: colors.muted }}>
-            {`${personName} · Freelance React & Next.js Developer`}
+            {`${personName} · Full Stack Developer & SDE`}
           </div>
         )}
       </div>

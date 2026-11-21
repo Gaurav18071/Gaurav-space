@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
     title: 'Let’s',
     accent: 'connect',
     description:
-      'Available for full stack and SDE roles: Delhi, India & remote globally.',
+      'Open to Full Stack and SDE opportunities: Delhi NCR on-site & remote.',
     render: 'rocket',
   });
 }

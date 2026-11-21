@@ -1,9 +1,9 @@
 {
   "global": {
     "openToWork": true,
-    "openToWorkText": "Open to Work · India & Remote",
+    "openToWorkText": "Open to SDE & Full-Stack Roles · Delhi NCR & Remote",
     "location": "Delhi, India",
-    "contentUpdated": "2026-11-16",
+    "contentUpdated": "2026-11-21",
     "navItems": [
       {
         "href": "/",
@@ -45,12 +45,12 @@
     "title": "Gaurav Mishra",
     "name": "Gaurav Mishra",
     "titles": [
-      "Software Development Engineer Intern",
       "Full Stack Developer",
-      "Java & Spring Boot Developer",
-      "Next.js Developer"
+      "Software Development Engineer (SDE)",
+      "Java & Spring Boot Backend",
+      "React & Next.js Frontend"
     ],
-    "tagline": "Final-year Computer Science Engineering student based in Delhi, India. Building end-to-end applications with Java, Spring Boot, React, Next.js and PostgreSQL, with a focus on backend engineering, secure APIs and practical AI integration.",
+    "tagline": "Final-year Computer Science student based in Delhi, India, seeking Full Stack & SDE roles. Building scalable applications with Java, Spring Boot, React, Next.js, and PostgreSQL.",
     "cta": {
       "primary": {
         "text": "Explore my work",
@@ -119,9 +119,9 @@
   "about": {
     "title": "About",
     "label": "Get to know me",
-    "openToWorkText": "Available for opportunities",
+    "openToWorkText": "Available for SDE & Full-Stack opportunities",
     "descriptionHeader": "A little about me",
-    "description": "<p><strong>Hi, I'm Gaurav Mishra</strong>, a <em>full-stack developer</em> based in <strong>Delhi, India</strong>, currently in my final year of Computer Science Engineering at Dronacharya Group of Institutions.</p><p>I build end-to-end web applications using <strong>Java, Spring Boot, React, Next.js and TypeScript</strong>. My work includes REST API development, authentication, relational database design, frontend development and deployment. I have also integrated LLM APIs to add AI-assisted features to application workflows.</p><p>I'm currently working as a <strong>Data &amp; AI Intern</strong> at the <em>Ministry of Panchayati Raj, Government of India</em>. I'm open to <strong>SDE internships and full-time software development opportunities</strong> in India and remote roles.</p>",
+    "description": "<p><strong>Hi, I'm Gaurav Mishra</strong>, a <em>Full Stack Developer &amp; Software Development Engineer</em> based in <strong>Delhi, India</strong>, currently in my final year of Computer Science Engineering at Dronacharya Group of Institutions.</p><p>I build end-to-end web applications using <strong>Java, Spring Boot, React, Next.js and PostgreSQL</strong>. My work includes REST API development, authentication, relational database design, frontend development and deployment. I have also integrated LLM APIs to add AI-assisted features to application workflows.</p><p>I'm currently working as a <strong>Data &amp; AI Intern</strong> at the <em>Ministry of Panchayati Raj, Government of India</em>. I'm actively seeking <strong>Full-Time Software Development Engineer (SDE) and Full-Stack roles</strong> (Delhi NCR on-site or Remote).</p>",
     "image": {
       "url": "/static/images/bio-pic.jpeg",
       "size": {
@@ -786,8 +786,8 @@
   },
   "footer": {
     "name": "Gaurav Mishra",
-    "tagline": "Software Development Engineer crafting modern full-stack experiences.",
-    "description": "Final-year Computer Science Engineering student building full-stack applications with Java, Spring Boot, Next.js and AI integrations. Open to SDE opportunities.",
+    "tagline": "Full Stack Developer & Software Development Engineer based in Delhi, India.",
+    "description": "Final-year Computer Science student building full-stack applications with Java, Spring Boot, Next.js and PostgreSQL. Seeking SDE & Full-Stack opportunities.",
     "social": [
       {
         "name": "GitHub",

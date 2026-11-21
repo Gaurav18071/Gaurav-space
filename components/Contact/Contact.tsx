@@ -20,12 +20,12 @@ import './Contact.scss';
 
 const toastAutoDismissMs = 8000;
 
-/** When a message landed, in UK time (where it's read) */
+/** When a message landed, in IST */
 const receivedTime = () =>
-  new Intl.DateTimeFormat('en-GB', {
+  new Intl.DateTimeFormat('en-IN', {
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'Europe/London',
+    timeZone: 'Asia/Kolkata',
   }).format(new Date());
 
 const ContactCard = ({ info }: { info: ContactInfo }) => {

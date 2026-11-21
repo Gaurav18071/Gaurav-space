@@ -86,7 +86,7 @@ const paletteData: PaletteData = {
   email,
   cv: { url: content.about.cta.primary.url, name: content.about.cv.download },
   links: content.footer.social.map(({ name, url }) => ({ name, url })),
-  whoami: `${personName}: Full Stack Developer & SDE Intern, ${content.global.location}. Building modern applications with React, Next.js, Java, Spring Boot, and AI integrations.`,
+  whoami: `${personName}: Full Stack Developer & SDE based in ${content.global.location}. Building modern applications with React, Next.js, Java, Spring Boot, and PostgreSQL.`,
 };
 
 const profileImage = content.about?.image?.url || '/static/images/bio-pic.jpeg';
@@ -101,7 +101,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `Freelance React & Next.js Developer UK | ${personName}`,
+    default: `${personName} | Full Stack Developer & Software Engineer`,
     template: `%s | ${personName}`,
   },
   description,
@@ -123,14 +123,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    siteName: `${personName} - Full Stack Developer`,
-    title: `Full Stack Developer | ${personName}`,
+    siteName: `${personName} - Full Stack Developer & SDE`,
+    title: `${personName} | Full Stack Developer & Software Engineer`,
     description,
-    locale: 'en_GB',
+    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${personName} | Full Stack Developer`,
+    title: `${personName} | Full Stack Developer & Software Engineer`,
     description,
     creator: '@gauravmishra_dev',
   },

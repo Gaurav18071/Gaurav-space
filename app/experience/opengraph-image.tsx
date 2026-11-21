@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
     title: 'Work',
     accent: 'experience',
     description:
-      'Nine years leading engineering teams at IBM, ADP and ERGO across payroll, insurance and government.',
+      'Work experience across Data & AI, frontend development, and web engineering internships at Ministry of Panchayati Raj, Atldo Tech, and Brainwave Matrix.',
     render: 'satellite',
   });
 }

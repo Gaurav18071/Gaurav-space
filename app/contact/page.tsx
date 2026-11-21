@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 
 const title = 'Contact: Full Stack Developer & SDE';
 const description =
-  'Get in touch with Gaurav Mishra. Open to full stack development and SDE opportunities, Delhi & remote globally.';
+  'Get in touch with Gaurav Mishra. Open to Full Stack Developer and SDE opportunities in Delhi NCR and remote.';
 
 export const metadata: Metadata = pageMetadata({ path: '/contact', title, description });
 

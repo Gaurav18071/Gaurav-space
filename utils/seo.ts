@@ -2,13 +2,20 @@ import content from '../content/content.json';
 
 import type { Metadata } from 'next';
 
-export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://gauravmishra.dev';
+const envUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '');
+const isLocalhost = !envUrl || envUrl.includes('localhost') || envUrl.includes('127.0.0.1');
 
-export const personName = content.home?.name || 'Portfolio';
+export const siteUrl =
+  process.env.NODE_ENV === 'production'
+    ? isLocalhost
+      ? 'https://gaurav-space.vercel.app'
+      : envUrl
+    : envUrl || 'http://localhost:3000';
+
+export const personName = content.home?.name || 'Gaurav Mishra';
 
 export const siteDescription =
-  'Full Stack Developer & SDE Intern based in New Delhi, India. Building end-to-end apps with React, Next.js, Spring Boot and LLM APIs. Open to SDE roles.';
+  'Full Stack Developer & Software Development Engineer based in Delhi, India. Building end-to-end applications with React, Next.js, Java, Spring Boot, and PostgreSQL. Open to SDE and full-stack roles.';
 
 // Bump in content.json (global.contentUpdated) whenever site content meaningfully changes;
 // feeds sitemap lastModified and ProfilePage dateModified.
@@ -46,10 +53,10 @@ export function pageMetadata({
     openGraph: {
       type: 'website',
       url: path,
-      siteName: `${personName} - Full Stack Developer`,
+      siteName: `${personName} - Full Stack Developer & SDE`,
       title: fullTitle,
       description,
-      locale: 'en_GB',
+      locale: 'en_IN',
       images: [ogImage],
     },
     twitter: {
