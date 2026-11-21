@@ -470,6 +470,56 @@
         "images": []
       },
       {
+        "title": "Golf Cart — Full-Stack Fundraising Platform",
+        "slug": "golf-cart",
+        "startDate": "2026",
+        "description": "Role-based full-stack fundraising and charity management platform built with Next.js, TypeScript, Supabase, Prisma, PostgreSQL and Razorpay. Features organization registration with document uploads, automated admin verification workflows, campaign creation, and secure payment processing with webhook-driven transaction logs. Integrated AI-assisted campaign drafting with structured output validation.",
+        "theme": {
+          "text": "light",
+          "border": "light",
+          "background": "dark"
+        },
+        "thumbnail": "mdi:golf",
+        "url": "https://github.com/Gaurav18071/Golf-Cart",
+        "technologies": [
+          {
+            "class": "devicon:nextjs",
+            "name": "Next.js"
+          },
+          {
+            "class": "devicon:typescript",
+            "name": "TypeScript"
+          },
+          {
+            "class": "logos:supabase-icon",
+            "name": "Supabase"
+          },
+          {
+            "class": "devicon:postgresql",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon:prisma",
+            "name": "Prisma"
+          },
+          {
+            "class": "simple-icons:razorpay",
+            "name": "Razorpay"
+          },
+          {
+            "class": "devicon:zod",
+            "name": "Zod"
+          }
+        ],
+        "links": {
+          "live": "",
+          "github": "https://github.com/Gaurav18071/Golf-Cart"
+        },
+        "status": "Source Code",
+        "video": "/static/projects/golf-cart/golf-cart-demo.mp4",
+        "images": []
+      },
+      {
         "title": "HireTrack — Recruitment Management Platform (ATS)",
         "slug": "hiretrack",
         "startDate": "2026",

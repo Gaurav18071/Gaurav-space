@@ -434,6 +434,34 @@ export function ProjectBody({
           onStep={slides.step}
           onSelect={slides.select}
         />
+      ) : project.video ? (
+        <div className="project-gallery">
+          <div
+            className="project-gallery__stage"
+            style={{
+              position: 'relative',
+              width: '100%',
+              borderRadius: '1rem',
+              overflow: 'hidden',
+              backgroundColor: 'rgba(5, 6, 13, 0.8)',
+              border: '1px solid rgba(167, 139, 250, 0.25)',
+            }}
+          >
+            <video
+              src={project.video}
+              controls
+              playsInline
+              preload="metadata"
+              style={{
+                width: '100%',
+                maxHeight: '480px',
+                display: 'block',
+                borderRadius: '0.75rem',
+                objectFit: 'contain',
+              }}
+            />
+          </div>
+        </div>
       ) : (
         <div className="project-gallery">
           <div className="project-gallery__stage project-gallery__stage--art">
@@ -468,12 +496,26 @@ export function ProjectBody({
               className="btn btn--primary project-body__visit"
             >
               <Icon
-                icon="ph:globe-hemisphere-west-bold"
+                icon={url.includes('github.com') ? 'mdi:github' : 'ph:globe-hemisphere-west-bold'}
                 width={18}
                 height={18}
                 aria-hidden="true"
               />
-              <span>Visit live site</span>
+              <span>{url.includes('github.com') ? 'View on GitHub' : 'Visit live site'}</span>
+              <span className="sr-only"> (opens in a new tab)</span>
+              <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
+            </a>
+          )}
+          {project.links?.github && url !== project.links.github && (
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--ghost project-body__visit"
+              style={{ marginTop: '0.625rem' }}
+            >
+              <Icon icon="mdi:github" width={18} height={18} aria-hidden="true" />
+              <span>View Source Code</span>
               <span className="sr-only"> (opens in a new tab)</span>
               <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
             </a>

@@ -230,6 +230,12 @@ export interface Project {
   }[];
   url: string;
   technologies: Technology[];
+  video?: string;
+  links?: {
+    live?: string;
+    github?: string;
+  };
+  status?: string;
 }
 
 export interface Theme {
