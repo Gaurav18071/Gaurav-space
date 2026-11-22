@@ -249,11 +249,7 @@ async function loadShot(
   texture.colorSpace = SRGBColorSpace;
   texture.anisotropy = 4;
   texture.needsUpdate = true;
-  const fit: Fit = shot.tall
-    ? 'page'
-    : bitmap.width / bitmap.height > logoAspect
-      ? 'logo'
-      : 'whole';
+  const fit: Fit = shot.tall ? 'page' : 'whole';
   texture.userData.fit = fit;
   await beforeUpload?.();
   await queueUpload(gl, texture);
@@ -392,8 +388,14 @@ function frameShot(rect: Vector4, texture: Texture, t: number, phase: number) {
     rect.set(0, 1 - (1 - top) / window, 1, 1 / window);
     return 0;
   }
-  // The box it fits in, in units of the screen's height
-  let [x, y, w, h] = [0, 0, screenAspect, 1];
+  // Keep 4% inset from the neon edge band and rounded corners so content is never clipped
+  const edgeInset = 0.04;
+  let [x, y, w, h] = [
+    screenAspect * edgeInset,
+    edgeInset,
+    screenAspect * (1 - 2 * edgeInset),
+    1 - 2 * edgeInset,
+  ];
   if (fit === 'logo') {
     const [insetX, insetY] = logoPlate.inset;
     w = screenAspect * (1 - 2 * insetX);

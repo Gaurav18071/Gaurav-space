@@ -341,10 +341,20 @@
         ],
         "links": {
           "live": "https://golf-platform-gn.vercel.app/",
-          "github": ""
+          "github": "https://github.com/Gaurav18071/Golf-Cart"
         },
         "status": "Live",
-        "images": []
+        "video": "/static/projects/golf-cart/golf-cart-demo.mp4",
+        "images": [
+          {
+            "url": "/static/projects/golf-cart/golf-cart-cover.jpg",
+            "alt": "Golf Charity — Play Golf, Win Prizes, Support Charities Platform",
+            "size": {
+              "width": 1024,
+              "height": 466
+            }
+          }
+        ]
       },
       {
         "title": "NeuroQuiz — Interactive Quiz & Learning Platform",
@@ -389,7 +399,16 @@
           "github": "https://github.com/Gaurav18071/NeuroQuiz"
         },
         "status": "Live",
-        "images": []
+        "images": [
+          {
+            "url": "/static/projects/neuroquiz/neuroquiz-cover.jpg",
+            "alt": "NeuroQuiz — Interactive AI-Powered Quiz & Learning Platform",
+            "size": {
+              "width": 1024,
+              "height": 495
+            }
+          }
+        ]
       },
       {
         "title": "Gaurav Mishra — Developer Portfolio",
@@ -414,7 +433,16 @@
           "github": ""
         },
         "status": "Live",
-        "images": []
+        "images": [
+          {
+            "url": "/static/projects/gaurav-portfolio/portfolio-cover.jpg",
+            "alt": "Gaurav Mishra — Interactive Developer Portfolio Interface",
+            "size": {
+              "width": 1024,
+              "height": 462
+            }
+          }
+        ]
       },
       {
         "title": "Flapboard — AI-Powered Adaptive Typing Platform",
@@ -467,57 +495,17 @@
           "github": ""
         },
         "status": "Live",
-        "images": []
-      },
-      {
-        "title": "Golf Cart — Full-Stack Fundraising Platform",
-        "slug": "golf-cart",
-        "startDate": "2026",
-        "description": "Role-based full-stack fundraising and charity management platform built with Next.js, TypeScript, Supabase, Prisma, PostgreSQL and Razorpay. Features organization registration with document uploads, automated admin verification workflows, campaign creation, and secure payment processing with webhook-driven transaction logs. Integrated AI-assisted campaign drafting with structured output validation.",
-        "theme": {
-          "text": "light",
-          "border": "light",
-          "background": "dark"
-        },
-        "thumbnail": "mdi:golf",
-        "url": "https://github.com/Gaurav18071/Golf-Cart",
-        "technologies": [
+        "video": "/static/projects/flapboard/flapboard-demo.mp4",
+        "images": [
           {
-            "class": "devicon:nextjs",
-            "name": "Next.js"
-          },
-          {
-            "class": "devicon:typescript",
-            "name": "TypeScript"
-          },
-          {
-            "class": "logos:supabase-icon",
-            "name": "Supabase"
-          },
-          {
-            "class": "devicon:postgresql",
-            "name": "PostgreSQL"
-          },
-          {
-            "class": "devicon:prisma",
-            "name": "Prisma"
-          },
-          {
-            "class": "simple-icons:razorpay",
-            "name": "Razorpay"
-          },
-          {
-            "class": "devicon:zod",
-            "name": "Zod"
+            "url": "/static/projects/flapboard/flapboard-cover.png",
+            "alt": "Flapboard — AI-Powered Adaptive Typing Platform Interface",
+            "size": {
+              "width": 1024,
+              "height": 471
+            }
           }
-        ],
-        "links": {
-          "live": "",
-          "github": "https://github.com/Gaurav18071/Golf-Cart"
-        },
-        "status": "Source Code",
-        "video": "/static/projects/golf-cart/golf-cart-demo.mp4",
-        "images": []
+        ]
       },
       {
         "title": "HireTrack — Recruitment Management Platform (ATS)",

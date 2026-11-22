@@ -30,7 +30,7 @@ const pageSizes = '(min-width: 1180px) 1024px, 86vw';
 const swipeThreshold = 44;
 
 export const pad = (n: number) => String(n).padStart(2, '0');
-const isLogo = (size: ProjectImage['size']) => size.width / size.height > 2.2;
+const isLogo = (_size: ProjectImage['size']) => false;
 /** Full-page captures (`fullPage` in content.json): shown at full width in a scrollable browser frame */
 export const isFullPage = (image: ProjectImage) => image.fullPage === true;
 /** The `sizes` a slide's image is drawn with: its preload has to match, or it fetches another copy */
@@ -415,6 +415,8 @@ export function ProjectBody({
   const count = images.length;
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
 
+  const [mediaTab, setMediaTab] = useState<'video' | 'shots'>('video');
+
   const facts = [
     { term: 'Year', detail: startDate },
     { term: 'Stack', detail: `${technologies.length} tech` },
@@ -423,132 +425,156 @@ export function ProjectBody({
 
   return (
     <div className="project-body">
-      {count > 0 ? (
-        <Gallery
-          key={name}
-          images={images}
-          title={name}
-          site={siteHost(url) ?? name}
-          index={slides.index}
-          direction={slides.direction}
-          onStep={slides.step}
-          onSelect={slides.select}
-        />
-      ) : project.video ? (
-        <div className="project-gallery">
-          <div
-            className="project-gallery__stage"
-            style={{
-              position: 'relative',
-              width: '100%',
-              borderRadius: '1rem',
-              overflow: 'hidden',
-              backgroundColor: 'rgba(5, 6, 13, 0.8)',
-              border: '1px solid rgba(167, 139, 250, 0.25)',
-            }}
-          >
-            <video
-              src={project.video}
-              controls
-              playsInline
-              preload="metadata"
-              style={{
-                width: '100%',
-                maxHeight: '480px',
-                display: 'block',
-                borderRadius: '0.75rem',
-                objectFit: 'contain',
-              }}
-            />
-          </div>
-        </div>
-      ) : (
-        <div className="project-gallery">
-          <div className="project-gallery__stage project-gallery__stage--art">
-            <ProjectArt icon={thumbnail} tone={number} />
-          </div>
-        </div>
-      )}
-
-      <div className="project-body__content">
-        <div className="project-body__main">
-          <Heading className="project-body__label">
-            <span aria-hidden="true">{'// '}</span>Overview
-          </Heading>
-          <p className="project-body__desc">{description}</p>
-        </div>
-
-        <aside className="project-body__side" aria-label="Project facts">
-          <dl className="project-body__facts">
-            {facts.map(({ term, detail }) => (
-              <div key={term} className="project-body__fact">
-                <dt>{term}</dt>
-                <dd>{detail}</dd>
-              </div>
-            ))}
-          </dl>
-
-          {url && (
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--primary project-body__visit"
-            >
-              <Icon
-                icon={url.includes('github.com') ? 'mdi:github' : 'ph:globe-hemisphere-west-bold'}
-                width={18}
-                height={18}
-                aria-hidden="true"
-              />
-              <span>{url.includes('github.com') ? 'View on GitHub' : 'Visit live site'}</span>
-              <span className="sr-only"> (opens in a new tab)</span>
-              <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
-            </a>
-          )}
-          {project.links?.github && url !== project.links.github && (
-            <a
-              href={project.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--ghost project-body__visit"
-              style={{ marginTop: '0.625rem' }}
-            >
-              <Icon icon="mdi:github" width={18} height={18} aria-hidden="true" />
-              <span>View Source Code</span>
-              <span className="sr-only"> (opens in a new tab)</span>
-              <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
-            </a>
+          {project.video && count > 0 && (
+            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '-0.25rem' }}>
+              <button
+                type="button"
+                className={`btn btn--sm ${mediaTab === 'video' ? 'btn--primary' : 'btn--ghost'}`}
+                onClick={() => setMediaTab('video')}
+                style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}
+              >
+                <Icon icon="ph:play-circle-bold" width={16} height={16} />
+                <span>Interactive Demo</span>
+              </button>
+              <button
+                type="button"
+                className={`btn btn--sm ${mediaTab === 'shots' ? 'btn--primary' : 'btn--ghost'}`}
+                onClick={() => setMediaTab('shots')}
+                style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}
+              >
+                <Icon icon="ph:image-bold" width={16} height={16} />
+                <span>Screenshot</span>
+              </button>
+            </div>
           )}
 
-          <div className="project-body__stack">
-            <Heading className="project-body__label">
-              <span aria-hidden="true">{'// '}</span>Built with
-            </Heading>
-            <ul className="project-body__tech">
-              {technologies.map((t, i) => (
-                <li
-                  key={t.name}
-                  className="project-body__tech-item"
-                  style={{ '--i': i } as CSSProperties}
-                >
-                  <span className="project-body__tech-icon" aria-hidden="true">
-                    <Icon
-                      icon={t.class}
-                      width={22}
-                      height={22}
-                      className={techIconClass(t.class)}
+              {project.video && mediaTab === 'video' ? (
+                <div className="project-gallery">
+                  <div
+                    className="project-gallery__stage"
+                    style={{
+                      position: 'relative',
+                      width: '100%',
+                      borderRadius: '1rem',
+                      overflow: 'hidden',
+                      backgroundColor: 'rgba(5, 6, 13, 0.85)',
+                      border: '1px solid var(--border-color)',
+                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
+                    }}
+                  >
+                    <video
+                      src={project.video}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      style={{
+                        width: '100%',
+                        maxHeight: '480px',
+                        display: 'block',
+                        borderRadius: '0.75rem',
+                        objectFit: 'contain',
+                      }}
                     />
-                  </span>
-                  <span className="project-body__tech-name">{t.name}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </div>
-  );
+                  </div>
+                </div>
+              ) : count > 0 ? (
+                <Gallery
+                  key={name}
+                  images={images}
+                  title={name}
+                  site={siteHost(url) ?? name}
+                  index={slides.index}
+                  direction={slides.direction}
+                  onStep={slides.step}
+                  onSelect={slides.select}
+                />
+              ) : (
+                <div className="project-gallery">
+                  <div className="project-gallery__stage project-gallery__stage--art">
+                    <ProjectArt icon={thumbnail} tone={number} />
+                  </div>
+                </div>
+              )}
+
+              <div className="project-body__content">
+                <div className="project-body__main">
+                  <Heading className="project-body__label">
+                    <span aria-hidden="true">{'// '}</span>Overview
+                  </Heading>
+                  <p className="project-body__desc">{description}</p>
+                </div>
+
+                <aside className="project-body__side" aria-label="Project facts">
+                  <dl className="project-body__facts">
+                    {facts.map(({ term, detail }) => (
+                      <div key={term} className="project-body__fact">
+                        <dt>{term}</dt>
+                        <dd>{detail}</dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  {url && (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn--primary project-body__visit"
+                    >
+                      <Icon
+                        icon={url.includes('github.com') ? 'mdi:github' : 'ph:globe-hemisphere-west-bold'}
+                        width={18}
+                        height={18}
+                        aria-hidden="true"
+                      />
+                      <span>{url.includes('github.com') ? 'View on GitHub' : 'Visit live site'}</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                      <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
+                    </a>
+                  )}
+                  {project.links?.github && url !== project.links.github && (
+                    <a
+                      href={project.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn--ghost project-body__visit"
+                      style={{ marginTop: '0.625rem' }}
+                    >
+                      <Icon icon="mdi:github" width={18} height={18} aria-hidden="true" />
+                      <span>View Source Code</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                      <Icon icon="ph:arrow-up-right-bold" width={16} height={16} aria-hidden="true" />
+                    </a>
+                  )}
+
+                  <div className="project-body__stack">
+                    <Heading className="project-body__label">
+                      <span aria-hidden="true">{'// '}</span>Built with
+                    </Heading>
+                    <ul className="project-body__tech">
+                      {technologies.map((t, i) => (
+                        <li
+                          key={t.name}
+                          className="project-body__tech-item"
+                          style={{ '--i': i } as CSSProperties}
+                        >
+                          <span className="project-body__tech-icon" aria-hidden="true">
+                            <Icon
+                              icon={t.class}
+                              width={22}
+                              height={22}
+                              className={techIconClass(t.class)}
+                            />
+                          </span>
+                          <span className="project-body__tech-name">{t.name}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          );
 }
 
-export default ProjectBody;
+          export default ProjectBody;
