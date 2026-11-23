@@ -89,8 +89,8 @@ function useAutoScroll(ref: RefObject<HTMLDivElement | null>) {
       if (!paused && !stopped && max > 0) {
         if (phase === 'wait' && now - since > 1400) phase = 'down';
         else if (phase === 'down') {
-          // The whole page in ~16s, never slower than a reading pace
-          position = Math.min(max, position + Math.max(45, max / 16) * dt);
+          // The whole page in ~10s, faster scrolling speed
+          position = Math.min(max, position + Math.max(60, max / 10) * dt);
           el.scrollTop = position;
           if (position >= max - 0.5) {
             phase = 'hold';
@@ -100,7 +100,7 @@ function useAutoScroll(ref: RefObject<HTMLDivElement | null>) {
           phase = 'up';
           since = now;
         } else if (phase === 'up') {
-          position = Math.max(0, position - Math.max(400, max / 1.6) * dt);
+          position = Math.max(0, position - Math.max(500, max / 1.3) * dt);
           el.scrollTop = position;
           if (position <= 0) {
             phase = 'wait';
@@ -415,8 +415,6 @@ export function ProjectBody({
   const count = images.length;
   const Heading = headingLevel === 2 ? 'h2' : 'h3';
 
-  const [mediaTab, setMediaTab] = useState<'video' | 'shots'>('video');
-
   const facts = [
     { term: 'Year', detail: startDate },
     { term: 'Stack', detail: `${technologies.length} tech` },
@@ -425,78 +423,26 @@ export function ProjectBody({
 
   return (
     <div className="project-body">
-          {project.video && count > 0 && (
-            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '-0.25rem' }}>
-              <button
-                type="button"
-                className={`btn btn--sm ${mediaTab === 'video' ? 'btn--primary' : 'btn--ghost'}`}
-                onClick={() => setMediaTab('video')}
-                style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}
-              >
-                <Icon icon="ph:play-circle-bold" width={16} height={16} />
-                <span>Interactive Demo</span>
-              </button>
-              <button
-                type="button"
-                className={`btn btn--sm ${mediaTab === 'shots' ? 'btn--primary' : 'btn--ghost'}`}
-                onClick={() => setMediaTab('shots')}
-                style={{ fontSize: '0.85rem', padding: '0.4rem 0.9rem' }}
-              >
-                <Icon icon="ph:image-bold" width={16} height={16} />
-                <span>Screenshot</span>
-              </button>
-            </div>
-          )}
+      {count > 0 ? (
+        <Gallery
+          key={name}
+          images={images}
+          title={name}
+          site={siteHost(url) ?? name}
+          index={slides.index}
+          direction={slides.direction}
+          onStep={slides.step}
+          onSelect={slides.select}
+        />
+      ) : (
+        <div className="project-gallery">
+          <div className="project-gallery__stage project-gallery__stage--art">
+            <ProjectArt icon={thumbnail} tone={number} />
+          </div>
+        </div>
+      )}
 
-              {project.video && mediaTab === 'video' ? (
-                <div className="project-gallery">
-                  <div
-                    className="project-gallery__stage"
-                    style={{
-                      position: 'relative',
-                      width: '100%',
-                      borderRadius: '1rem',
-                      overflow: 'hidden',
-                      backgroundColor: 'rgba(5, 6, 13, 0.85)',
-                      border: '1px solid var(--border-color)',
-                      boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4)',
-                    }}
-                  >
-                    <video
-                      src={project.video}
-                      controls
-                      playsInline
-                      preload="metadata"
-                      style={{
-                        width: '100%',
-                        maxHeight: '480px',
-                        display: 'block',
-                        borderRadius: '0.75rem',
-                        objectFit: 'contain',
-                      }}
-                    />
-                  </div>
-                </div>
-              ) : count > 0 ? (
-                <Gallery
-                  key={name}
-                  images={images}
-                  title={name}
-                  site={siteHost(url) ?? name}
-                  index={slides.index}
-                  direction={slides.direction}
-                  onStep={slides.step}
-                  onSelect={slides.select}
-                />
-              ) : (
-                <div className="project-gallery">
-                  <div className="project-gallery__stage project-gallery__stage--art">
-                    <ProjectArt icon={thumbnail} tone={number} />
-                  </div>
-                </div>
-              )}
-
-              <div className="project-body__content">
+      <div className="project-body__content">
                 <div className="project-body__main">
                   <Heading className="project-body__label">
                     <span aria-hidden="true">{'// '}</span>Overview

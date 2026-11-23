@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Mishra - Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #fff;
+            padding: 50px 60px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0d5c4d 0%, #0d7a63 100%);
+            color: white;
+            padding: 40px 48px;
+            margin: -50px -60px 40px -60px;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 56px;
+            font-weight: 300;
+            margin-bottom: 6px;
+            letter-spacing: -1.2px;
+            line-height: 1.1;
+        }
+        
+        .header .subtitle {
+            font-size: 26px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            letter-spacing: -0.3px;
+        }
+        
+        .header .tech-line {
+            font-size: 11.5px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 26px;
+        }
+        
+        .available-badge {
+            position: absolute;
+            top: 40px;
+            right: 48px;
+            border: 2.5px solid rgba(255,255,255,0.35);
+            border-radius: 10px;
+            padding: 11px 22px;
+            text-align: center;
+        }
+        
+        .available-badge .label {
+            font-size: 9.5px;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 3px;
+        }
+        
+        .available-badge .date {
+            font-size: 19px;
+            font-weight: 300;
+            letter-spacing: -0.6px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 26px;
+            font-size: 13.5px;
+            margin-bottom: 22px;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14.5px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .portfolio-link .icon {
+            font-size: 17px;
+        }
+        
+        /* SECTIONS */
+        .section {
+            margin-bottom: 34px;
+        }
+        
+        .section-title {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #0d7a63;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: "◆";
+            font-size: 11px;
+        }
+        
+        /* PROFILE */
+        .profile-box {
+            border-left: 4.5px solid #d1fae5;
+            padding-left: 22px;
+            margin: 18px 0;
+        }
+        
+        .profile-text {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #3f3f3f;
+        }
+        
+        .profile-text strong {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        /* SKILLS */
+        .skills-table {
+            width: 100%;
+        }
+        
+        .skill-row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 14px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .skill-label {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-align: right;
+            padding-right: 10px;
+        }
+        
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .badge {
+            background: #10b981;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .badge-secondary {
+            background: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        /* EXPERIENCE */
+        .exp-item {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 7px;
+        }
+        
+        .exp-title {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+        
+        .exp-company {
+            color: #0d7a63;
+            font-weight: 600;
+        }
+        
+        .exp-date {
+            font-size: 13.5px;
+            color: #666;
+            text-align: right;
+            white-space: nowrap;
+            line-height: 1.4;
+        }
+        
+        .exp-duration {
+            display: block;
+            font-size: 12.5px;
+            color: #999;
+        }
+        
+        .exp-subtitle {
+            font-size: 13.5px;
+            color: #666;
+            margin-bottom: 11px;
+        }
+        
+        .tech-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 11px 0;
+        }
+        
+        .tech-badge {
+            background: #10b981;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 10.5px;
+            font-weight: 600;
+        }
+        
+        .exp-bullets {
+            list-style: none;
+            margin-top: 11px;
+        }
+        
+        .exp-bullets li {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: #3f3f3f;
+            padding-left: 18px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .exp-bullets li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        
+        /* EDUCATION */
+        .edu-item {
+            margin-bottom: 18px;
+        }
+        
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .edu-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a202c;
+        }
+        
+        .edu-subtitle {
+            font-size: 13px;
+            color: #374151;
+        }
+        
+        .edu-date {
+            font-size: 13px;
+            color: #6b7280;
+            text-align: right;
+        }
+        
+        /* ACHIEVEMENTS */
+        .achievement-list {
+            list-style: none;
+        }
+        
+        .achievement-list li {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #374151;
+            padding-left: 16px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .achievement-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body { padding: 32px 40px; }
+            .header { margin: -32px -40px 28px -40px; padding: 28px 36px; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="available-badge">
+            <div class="label">AVAILABLE FROM</div>
+            <div class="date">Immediately</div>
+        </div>
+        
+        <h1>Gaurav Mishra</h1>
+        <div class="subtitle">Full Stack Developer</div>
+        <div class="tech-line">JAVA · SPRING BOOT · REACT · NEXT.JS · TYPESCRIPT · POSTGRESQL</div>
+        
+        <div class="contact-info">
+            <span>📍 Delhi, India</span>
+            <span>📞 +91 97170 67268</span>
+            <span>✉ <a href="mailto:gauravmishra.dev.27@gmail.com">gauravmishra.dev.27@gmail.com</a></span>
+            <span>💼 <a href="https://www.linkedin.com/in/gaurav-mishra-5579a330">linkedin.com/in/gauravmishra</a></span>
+        </div>
+        
+        <a href="https://gaurav-portfolio-ea7.pages.dev" class="portfolio-link">
+            <span class="icon">🌐</span>
+            <span>View portfolio</span>
+            <span>· portfolio.gauravmishra.com</span>
+        </a>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Profile</h2>
+        <div class="profile-box">
+            <p class="profile-text">
+                Full Stack Developer and final-year Computer Science Engineering student with hands-on experience building scalable web applications and cloud platforms. Proficient in <strong>Java, Spring Boot, React, Next.js, TypeScript, and PostgreSQL</strong> with strong foundation in both frontend and backend development. Successfully developed <strong>5+ full-stack projects</strong> including AI-powered typing platforms, fundraising systems, and recruitment management tools. Currently serving as <strong>Data & AI Intern at Ministry of Panchayati Raj, Government of India</strong>. Experienced in REST API development, JWT authentication, database design, and deploying production-grade applications. Solved <strong>80+ DSA problems</strong> demonstrating strong problem-solving abilities. Seeking <strong>SDE, Full-Stack Developer, and Frontend Engineer</strong> roles to contribute to building innovative solutions while growing as a software engineer.
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Core Technical Skills</h2>
+        <div class="skills-table">
+            <div class="skill-row">
+                <div class="skill-label">Languages & Runtimes</div>
+                <div class="skill-badges">
+                    <span class="badge">Java</span>
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">HTML</span>
+                    <span class="badge">CSS</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">Frontend</div>
+                <div class="skill-badges">
+                    <span class="badge">React</span>
+                    <span class="badge">Next.js</span>
+                    <span class="badge">Redux</span>
+                    <span class="badge">Tailwind CSS</span>
+                    <span class="badge">shadcn/ui</span>
+                    <span class="badge">GSAP</span>
+                    <span class="badge">Framer Motion</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">Backend & APIs</div>
+                <div class="skill-badges">
+                    <span class="badge">Spring Boot</span>
+                    <span class="badge">Spring Security</span>
+                    <span class="badge">REST APIs</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">JWT</span>
+                    <span class="badge">bcrypt</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">Databases</div>
+                <div class="skill-badges">
+                    <span class="badge">PostgreSQL</span>
+                    <span class="badge">Prisma ORM</span>
+                    <span class="badge">Supabase</span>
+                    <span class="badge">SQL</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">AI Engineering</div>
+                <div class="skill-badges">
+                    <span class="badge">OpenAI API</span>
+                    <span class="badge">Claude API</span>
+                    <span class="badge">Gemini API</span>
+                    <span class="badge">LLM Integration</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">DevOps & Tooling</div>
+                <div class="skill-badges">
+                    <span class="badge">Git</span>
+                    <span class="badge">GitHub</span>
+                    <span class="badge">Docker</span>
+                    <span class="badge">Maven</span>
+                    <span class="badge">Postman</span>
+                    <span class="badge">Vercel</span>
+                </div>
+            </div>
+            
+            <div class="skill-row">
+                <div class="skill-label">Testing & QA</div>
+                <div class="skill-badges">
+                    <span class="badge">Zod</span>
+                    <span class="badge">Jest</span>
+                    <span class="badge">Cross-Browser Testing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">Data & AI Intern, <span class="exp-company">Ministry of Panchayati Raj, Government of India</span></div>
+                </div>
+                <div class="exp-date">
+                    Sep 2026 – Present
+                    <span class="exp-duration">4 mos</span>
+                </div>
+            </div>
+            <div class="exp-subtitle">AI integration, data management and portal development</div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">ChatGPT</span>
+                <span class="tech-badge">Claude</span>
+                <span class="tech-badge">Gemini</span>
+                <span class="tech-badge">LLM APIs</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Data Management</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Contributing to development of website chatbot and dedicated portal for panchayats across India serving millions of citizens.</li>
+                <li>Supporting organization and management of panchayat-level datasets in structured format for nationwide government operations.</li>
+                <li>Utilizing AI tools (ChatGPT, Claude, Gemini) to assist research workflows and improve data processing efficiency.</li>
+                <li>Working with LLM APIs to build intelligent features for government portal enhancing user experience.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">Frontend Developer Intern, <span class="exp-company">Atldo Tech</span></div>
+                </div>
+                <div class="exp-date">
+                    Jul 2026 – Aug 2026
+                    <span class="exp-duration">2 mos</span>
+                </div>
+            </div>
+            <div class="exp-subtitle">Agile software development and component architecture</div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">Git</span>
+                <span class="tech-badge">Responsive Design</span>
+                <span class="tech-badge">Agile</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Developed and shipped 6+ React components translating design requirements into responsive, cross-browser-tested interfaces.</li>
+                <li>Merged 15+ pull requests across four sprint cycles through Git-based code reviews maintaining high code quality.</li>
+                <li>Performed cross-browser testing ensuring compatibility across Chrome, Firefox, and Safari.</li>
+                <li>Collaborated with design and backend teams using Agile methodology delivering features on schedule.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">Web Developer Intern, <span class="exp-company">Brainwave Matrix Solutions</span></div>
+                </div>
+                <div class="exp-date">
+                    Sep 2024 – Nov 2024
+                    <span class="exp-duration">3 mos</span>
+                </div>
+            </div>
+            <div class="exp-subtitle">Web development and UI component creation</div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">HTML5</span>
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">React</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Built 8+ web pages and 5+ reusable UI components from project requirements ensuring consistency.</li>
+                <li>Debugged layouts across Chrome, Firefox and Safari improving cross-browser consistency.</li>
+                <li>Implemented responsive designs ensuring optimal viewing across mobile, tablet, and desktop devices.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">Flapboard – AI-Powered Adaptive Typing Platform</div>
+                </div>
+                <div class="exp-date">2026 | Live</div>
+            </div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">Spring Boot</span>
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">JWT</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Developed full-stack typing platform with real-time WPM and accuracy tracking using Spring Boot, Java, Next.js, and PostgreSQL.</li>
+                <li>Built REST APIs and implemented JWT authentication with protected routes and user session management.</li>
+                <li>Designed PostgreSQL-backed relational models for user accounts, typing sessions, and progress history.</li>
+                <li>Integrated LLM API to generate personalized coaching and targeted practice recommendations from performance metrics.</li>
+                <li>Deployed backend with Docker and frontend on Vercel achieving 99.9% uptime.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">Golf Cart – Full-Stack Fundraising Platform</div>
+                </div>
+                <div class="exp-date">2026 | Live</div>
+            </div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Prisma</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Razorpay</span>
+                <span class="tech-badge">Zod</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Built role-based fundraising platform using Next.js, TypeScript, Prisma, and PostgreSQL serving 100+ test users.</li>
+                <li>Implemented organization registration with document uploads and admin verification workflow.</li>
+                <li>Designed relational data models for profiles, organizations, campaigns, donations, and payments.</li>
+                <li>Integrated Razorpay payment gateway for secure donation processing and transaction tracking.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div>
+                    <div class="exp-title">HireTrack – Recruitment Management Platform (ATS)</div>
+                </div>
+                <div class="exp-date">2026 | Source Code</div>
+            </div>
+            
+            <div class="tech-row">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Prisma</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Auth.js</span>
+            </div>
+            
+            <ul class="exp-bullets">
+                <li>Developed applicant tracking system using Next.js, TypeScript, Prisma and PostgreSQL.</li>
+                <li>Implemented credentials-based authentication with bcrypt password hashing and protected routes.</li>
+                <li>Designed hiring pipeline covering Applied, Screening, Interview, Offer, Hired, and Rejected stages.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education & Certifications</h2>
+        
+        <div class="edu-item">
+            <div class="edu-header">
+                <div class="edu-title">Bachelor of Technology – Computer Science and Engineering</div>
+                <div class="edu-date">2023 – 2027</div>
+            </div>
+            <div class="edu-subtitle">Dronacharya Group of Institutions, Greater Noida, India</div>
+            <div class="edu-subtitle" style="font-style: italic; margin-top: 2px;">Final Year | Relevant Coursework: Data Structures, Algorithms, DBMS, OS, Web Development</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-header">
+                <div class="edu-title">Responsive Web Design Certification</div>
+                <div class="edu-date">Certified</div>
+            </div>
+            <div class="edu-subtitle">freeCodeCamp</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-header">
+                <div class="edu-title">Foundations of Generative AI</div>
+                <div class="edu-date">Certified</div>
+            </div>
+            <div class="edu-subtitle">IBM</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="edu-header">
+                <div class="edu-title">Full-Stack Developer Training</div>
+                <div class="edu-date">Certified</div>
+            </div>
+            <div class="edu-subtitle">Digital Heroes</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Achievements</h2>
+        <ul class="achievement-list">
+            <li>Solved 80+ coding problems across LeetCode and NeetCode focusing on Data Structures and Algorithms.</li>
+            <li>Led student team participating in Smart India Hackathon 2024.</li>
+            <li>Merged 15+ pull requests across multiple projects demonstrating strong collaboration skills.</li>
+            <li>Served as Class Representative facilitating communication between students and faculty.</li>
+        </ul>
+    </div>
+</body>
+</html>

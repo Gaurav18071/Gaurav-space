@@ -344,14 +344,14 @@
           "github": "https://github.com/Gaurav18071/Golf-Cart"
         },
         "status": "Live",
-        "video": "/static/projects/golf-cart/golf-cart-demo.mp4",
         "images": [
           {
-            "url": "/static/projects/golf-cart/golf-cart-cover.jpg",
-            "alt": "Golf Charity — Play Golf, Win Prizes, Support Charities Platform",
+            "url": "/static/projects/golf-cart/golf-cart-full.jpg",
+            "alt": "Golf Cart — Full Page Preview with Auto-Scrolling",
+            "fullPage": true,
             "size": {
-              "width": 1024,
-              "height": 466
+              "width": 1920,
+              "height": 3279
             }
           }
         ]
@@ -401,11 +401,12 @@
         "status": "Live",
         "images": [
           {
-            "url": "/static/projects/neuroquiz/neuroquiz-cover.jpg",
-            "alt": "NeuroQuiz — Interactive AI-Powered Quiz & Learning Platform",
+            "url": "/static/projects/neuroquiz/neuroquiz.jpg",
+            "alt": "NeuroQuiz — Full Page Platform Preview with Auto-Scrolling",
+            "fullPage": true,
             "size": {
-              "width": 1024,
-              "height": 495
+              "width": 1920,
+              "height": 6152
             }
           }
         ]
@@ -435,11 +436,12 @@
         "status": "Live",
         "images": [
           {
-            "url": "/static/projects/gaurav-portfolio/portfolio-cover.jpg",
-            "alt": "Gaurav Mishra — Interactive Developer Portfolio Interface",
+            "url": "/static/projects/gaurav-portfolio/gaurav-portfolio.jpg",
+            "alt": "Gaurav Portfolio — Full Page Preview with Auto-Scrolling",
+            "fullPage": true,
             "size": {
-              "width": 1024,
-              "height": 462
+              "width": 1920,
+              "height": 12435
             }
           }
         ]
@@ -495,14 +497,14 @@
           "github": ""
         },
         "status": "Live",
-        "video": "/static/projects/flapboard/flapboard-demo.mp4",
         "images": [
           {
-            "url": "/static/projects/flapboard/flapboard-cover.png",
-            "alt": "Flapboard — AI-Powered Adaptive Typing Platform Interface",
+            "url": "/static/projects/flapboard/flapboard-full.jpg",
+            "alt": "Flapboard — Full Page Platform Preview with Auto-Scrolling",
+            "fullPage": true,
             "size": {
-              "width": 1024,
-              "height": 471
+              "width": 1920,
+              "height": 3152
             }
           }
         ]
@@ -617,141 +619,169 @@
       {
         "name": "Java",
         "class": "devicon:java",
+        "level": "75",
         "category": "languages"
       },
       {
         "name": "JavaScript",
         "class": "devicon:javascript",
+        "level": "70",
         "category": "languages"
       },
       {
         "name": "TypeScript",
         "class": "devicon:typescript",
+        "level": "75",
         "category": "languages"
       },
       {
         "name": "Python",
         "class": "devicon:python",
+        "level": "70",
         "category": "languages"
       },
       {
         "name": "React",
         "class": "devicon:react",
+        "level": "80",
         "category": "frontend"
       },
       {
         "name": "Next.js",
         "class": "devicon:nextjs",
+        "level": "80",
         "category": "frontend"
       },
       {
         "name": "HTML5",
         "class": "devicon:html5",
+        "level": "95",
         "category": "frontend"
       },
       {
         "name": "CSS3",
         "class": "devicon:css3",
+        "level": "90",
         "category": "frontend"
       },
       {
         "name": "Tailwind CSS",
         "class": "devicon:tailwindcss",
+        "level": "85",
         "category": "frontend"
       },
       {
         "name": "shadcn/ui",
         "class": "simple-icons:shadcnui",
+        "level": "80",
         "category": "frontend"
       },
       {
         "name": "Spring Boot",
         "class": "devicon:spring",
+        "level": "75",
         "category": "backend"
       },
       {
         "name": "Spring Security",
         "class": "devicon:spring",
+        "level": "75",
         "category": "backend"
       },
       {
         "name": "REST APIs",
         "class": "material-symbols:api",
+        "level": "75",
         "category": "backend"
       },
       {
         "name": "JWT Authentication",
         "class": "logos:jwt-icon",
+        "level": "70",
         "category": "backend"
       },
       {
         "name": "PostgreSQL",
         "class": "devicon:postgresql",
+        "level": "70",
         "category": "backend"
       },
       {
         "name": "Prisma ORM",
         "class": "devicon:prisma",
+        "level": "70",
         "category": "backend"
       },
       {
         "name": "Supabase",
         "class": "logos:supabase-icon",
+        "level": "80",
         "category": "backend"
       },
       {
         "name": "OpenAI API",
         "class": "simple-icons:openai",
+        "level": "80",
         "category": "ai"
       },
       {
         "name": "Claude API",
         "class": "logos:claude-icon",
+        "level": "80",
         "category": "ai"
       },
       {
         "name": "Gemini API",
         "class": "logos:google-gemini",
+        "level": "85",
         "category": "ai"
       },
       {
         "name": "Git",
         "class": "devicon:git",
+        "level": "90",
         "category": "tooling"
       },
       {
         "name": "GitHub",
         "class": "devicon:github",
+        "level": "85",
         "category": "tooling"
       },
       {
         "name": "Docker",
         "class": "devicon:docker",
+        "level": "75",
         "category": "tooling"
       },
       {
         "name": "Postman",
         "class": "devicon:postman",
+        "level": "85",
         "category": "tooling"
       },
       {
         "name": "Maven",
         "class": "devicon:maven",
+        "level": "80",
         "category": "tooling"
       },
       {
         "name": "Vercel",
         "class": "devicon:vercel",
+        "level": "85",
         "category": "tooling"
       },
       {
         "name": "Zod",
         "class": "simple-icons:zod",
+        "level": "80",
         "category": "testing"
       },
       {
         "name": "Cross-Browser Testing",
         "class": "mdi:web",
+        "level": "85",
         "category": "testing"
       }
     ]
